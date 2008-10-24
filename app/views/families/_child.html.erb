@@ -1,0 +1,13 @@
+<div class="child">
+<% new_or_existing = child.new_record? ? 'new' : 'existing' -%>
+<% prefix = "family[#{new_or_existing}_child_attributes][]" -%>
+<% fields_for prefix, child do |child_form| -%>
+<p>
+		Child: <%= child_form.text_field :name %>
+		<%= child_form.select :gender, [['Boy',0],['Girl',1]] %>
+		<%= child_form.text_field :age, :size => 2 %>
+		<%= child_form.select :agetype, [['Years',0],['Months',1]] %>
+		<%= link_to_function "remove", "$(this).up('.child').remove()" %>
+</p>
+<% end -%>
+</div>

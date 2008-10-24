@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @setting.name %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%=h @setting.value %>
+</p>
+
+<p>
+  <b>Friendly:</b>
+  <%=h @setting.friendly %>
+</p>
+
+
+<%= link_to 'Edit', edit_setting_path(@setting) %> |
+<%= link_to 'Back', settings_path %>

@@ -1,0 +1,35 @@
+<% form_for([@family, @child]) do |f| %>
+<table>
+	<tr>
+		<th>
+			Name
+		</th>
+		<th>
+			Gender
+		</th>
+		<th>
+			Age
+		</th>
+		<th>
+		</th>
+	</tr>
+	<tr>
+    	<td>	
+			<%= f.text_field :name %>
+		</td>
+		<td>
+			<%= select (:child, :gender, { "Boy" => 0, "Girl" => 1}) %>
+		</td>
+		<td>
+			<%= f.text_field :age, :size => 2 %>
+		</td>
+		<td>
+			<%= select (:child, :agetype, {"Years" => 0, "Months" => 1}) %>
+		</td>
+	</tr>
+</table>
+
+  <p>
+    <%= f.submit button_name %>
+  </p>
+<% end %>

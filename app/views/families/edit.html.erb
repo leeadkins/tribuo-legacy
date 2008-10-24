@@ -1,0 +1,48 @@
+<h1>Editing family</h1>
+
+<% form_for(@family) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :lastname %><br />
+    <%= f.text_field :lastname %>
+  </p>
+  <p>
+    <%= f.label :firstname %><br />
+    <%= f.text_field :firstname %>
+  </p>
+  <p>
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :directions %><br />
+    <%= f.text_field :directions %>
+  </p>
+  <p>
+    <%= f.label :familysize %><br />
+    <%= f.text_field :familysize %>
+  </p>
+  <p>
+    <%= f.label :childrensize %><br />
+    <%= f.text_field :childrensize %>
+  </p>
+  <p>
+    <%= f.label :foodonly %><br />
+    <%= f.text_field :foodonly %>
+  </p>
+  <p>
+    <%= f.label :box %><br />
+    <%= f.text_field :box %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @family %> |
+<%= link_to 'Back', families_path %>

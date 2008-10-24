@@ -1,0 +1,120 @@
+<% content_for :sidebar do %>
+ 	<p>
+		Use this form to create
+		a new family. Fields that
+		are required are marked with a
+		red asterisk (*).
+	</p>
+<% end %>
+<h1>Create a new family</h1>
+<% form_for(@family) do |f| %>
+  <%= f.error_messages %>
+<table>
+	<tr>
+		<td>
+  			<p>
+		    	<%= f.label :lastname, "Last Name" %>:
+			</p>
+		</td>
+		<td>
+		    <p>
+				<%= f.text_field :lastname %>
+		  	</p>
+		</td>
+	</tr>
+	<tr>
+		<td>  
+			<p>
+		    	<%= f.label :firstname, "First Name" %>:
+		    </p>
+		</td>
+		<td>
+			<p>
+				<%= f.text_field :firstname %>
+		  	</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		  	<p>
+		    	<%= f.label :phone, "Phone Number" %>:
+		    </p>
+		</td>
+		<td>
+			<p>
+				<%= f.text_field :phone %>
+		  	</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		  	<p>
+		    	<%= f.label :address, "Address" %>:
+		    </p>
+		</td>
+		<td>
+			<p>
+				<%= f.text_field :address %>
+		  	</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		  	<p>
+		    	<%= f.label :directions, "Directions" %>:
+			</p>
+		</td>
+		<td>
+			<p>
+		    	<%= f.text_field :directions %>
+		  	</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		  	<p>
+		    	<%= f.label :familysize, "Family Size" %>:
+			</p>
+		</td>
+		<td>
+			<p>
+		    	<%= f.text_field :familysize %>
+		  	</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		  	<p>
+		    	<%= f.label :childrensize, "Children" %>:
+		    </p>
+		</td>
+		<td>	
+			<p>
+				<%= f.text_field :childrensize %>
+		  	</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		  	<p>
+		    	<%= f.label :foodonly, "Food Only" %>:
+			</p>
+		</td>
+		<td>
+			<p>
+				<%= select (:family, :foodonly, {"No" => 0, "Yes" => 1}) %>
+		  	</p>
+		</td>
+	</tr>
+</table>
+
+	<div id="children">
+	</div>
+	<p>
+		<%= add_child_link "Add A Child" %>
+	</p>
+  	<p>
+    <%= f.submit "Create" %>
+  	</p>
+<% end %>
+<%= link_to 'Back', families_path %>

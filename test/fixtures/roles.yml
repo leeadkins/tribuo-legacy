@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  editown: 1
+  editall: 1
+  admin: 1
+
+two:
+  name: MyString
+  editown: 1
+  editall: 1
+  admin: 1

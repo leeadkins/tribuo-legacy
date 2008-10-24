@@ -1,0 +1,8 @@
+<h1>New Child</h1>
+
+<%= error_messages_for :child %>
+
+<%= render :partial => @child, 
+  :locals => { :button_name => "Create"} %>
+
+<%= link_to 'Back', family_children_path(@family) %>

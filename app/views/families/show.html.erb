@@ -1,0 +1,76 @@
+<% content_for :sidebar do %>
+	<p>
+		At a glance:
+	</p>
+	<p>
+	  <b>Box:</b>
+	  <% unless @family.box %>
+	  	None yet.
+	  <% else %>
+	  <%=h @family.box %>
+	  <% end %>
+	</p>
+	<p>
+		<b>Entered by:</b>
+		<%=h @family.user.name %>
+	</p>
+	<% unless @family.children.size == @family.childrensize %>
+	<p>
+		The number of children entered doesn't match the number declared. Please check your records.
+	</p>
+	<% end %>
+
+<% end %>
+<p>
+<%= editable_content_tag(:span, @family, 'firstname', true, nil,{:class => "show_family_name"},{:okText => 'Save'}) %>
+<%= editable_content_tag(:span, @family, 'lastname', true, nil,{:class => "show_family_name"},{:okText => 'Save'}) %>
+</p>
+<p>
+<%= editable_content_tag(:span, @family, 'phone', true, nil,{:class => "show_family_info"},{:okText => 'Save'}) %>
+<br/>
+<%= editable_content_tag(:span, @family, 'address', true, nil,{:class => "show_family_info"},{:okText => 'Save'}) %>
+<br/>
+<%= editable_content_tag(:span, @family, 'directions', true, nil,{:class => "show_family_info"},{:okText => 'Save'}) %>
+<br/>
+<span>Size: </span>
+<%= editable_content_tag(:span, @family, 'familysize', true, nil,{:class => "show_family_info"},{:okText => 'Save'}) %>
+<span>Children: </span>
+<%= editable_content_tag(:span, @family, 'childrensize', true, nil,{:class => "show_family_info"},{:okText => 'Save'}) %>
+<br/>
+  Food Only: 
+  <%=h @family.human_foodonly %>
+</p>
+
+<!-- The Childrens -->
+<div id="children_box">
+	<h3>Children</h3>
+	<table>
+<% unless @family.children.empty? %>
+  <% @family.children.each do |child| %>
+		<tr>
+  			<td>
+				<%= editable_content_tag(:span, child, 'name', true, "/families/#{@family.id}/children/#{child.id}",{:class => "show_child_name"},{:okText => 'Save'}) %>
+			</td>	
+			<td>
+				<%= child.human_gender %>
+			</td>
+			<td>
+
+					<%= editable_content_tag(:span, child, 'age', true, "/families/#{@family.id}/children/#{child.id}",{:class => "show_child_name"},{:okText => 'Save'}) %>
+			</td>
+			<td>	
+				<%=h child.human_type %>
+			</td>
+		</tr>
+  <% end %>
+<% end %>
+	</table>
+</div>
+
+<!-- #New Child Form -->
+<%= render :partial => @child = Child.new, 
+   :locals => { :button_name => 'Create'}%>
+
+<%= link_to 'Children', family_children_path(@family) %>
+<%= link_to 'Edit', edit_family_path(@family) %> |
+<%= link_to 'Back', families_path %>

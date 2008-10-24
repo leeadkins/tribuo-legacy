@@ -1,0 +1,58 @@
+<% content_for :sidebar do %>
+	<p>
+		On the Families page, you can see all
+		the families you've entered into Tribuo, along
+		with some basic information about each one.
+		To see more detailed information, or to perform
+		changes, click a family.
+	</p>
+	<p>
+		If a family is highlighted in red, the number of 
+		children declared doesn't match the number of children
+		actually entered and needs to be reviewed.
+	</p>
+<% end %>
+
+<h1>Our Families</h1>
+<h2>currently <%= @families.size %> families in Tribuo. </h2>
+
+<table>
+  <tr>
+    <th>Last Name</th>
+    <th>First Name</th>
+    <th>Phone</th>
+    <th>Address</th>
+    <th>Directions</th>
+    <th>Size</th>
+    <th>Children</th>
+    <th>Food Only?</th>
+    <th>Box</th>
+  </tr>
+
+<% for family in @families %>
+<% if family.childrensize != family.children_count
+		familyliststyle="family-row-error"
+	else
+		familyliststyle="family-row"
+	end
+	
+%>
+  <tr class="<%= familyliststyle %>">
+    <td><%=h family.lastname %></td>
+    <td><%=h family.firstname %></td>
+    <td><%=h family.phone %></td>
+    <td><%=h family.address %></td>
+    <td><%=h family.directions %></td>
+    <td><%=h family.familysize %></td>
+    <td><%=h family.childrensize %></td>
+    <td><%=h family.human_foodonly %></td>
+    <td><%=h family.box %></td>
+    <td><%= link_to 'Show', family %></td>
+    <td><%= link_to 'Edit', edit_family_path(family) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New family', new_family_path %>

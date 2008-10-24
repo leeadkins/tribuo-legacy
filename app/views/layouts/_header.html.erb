@@ -1,0 +1,20 @@
+				
+				<div id="logo">
+					<%= link_to image_tag('tribuoheadermed.png'), :controller => :main, :action => :index %>
+				</div>
+				<div id="user">
+					<% if logged_in? %>
+					<p>
+						Welcome, <%= link_to_user current_user, :content_method => :name %><br/>
+						<%= link_to "Logout", logout_url %>
+					</p>
+					<% end %>
+				
+				</div>
+				<div id="menu">
+					<ul>
+						<li><%= link_to "Families", :controller => "families" %></li>
+						<li><%= link_to "Activities", :controller => "activities" %></li>
+						<li><%= link_to "Settings", :controller => "settings" %></li>
+					</ul>
+				</div>

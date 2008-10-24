@@ -1,0 +1,183 @@
+/* @override 
+	http://0.0.0.0:3000/stylesheets/tribuo.css?1223913182
+	http://0.0.0.0:3000/stylesheets/tribuo.css?1223917306
+	http://0.0.0.0:3000/stylesheets/tribuo.css?1223949523
+	http://0.0.0.0:3000/stylesheets/tribuo.css?1224379990
+	http://0.0.0.0:3000/stylesheets/tribuo.css?1224516208
+	http://0.0.0.0:3000/stylesheets/tribuo.css?1224727820
+*/
+
+body {
+	background: #60666c url(../images/bluegraybg.png) repeat;
+	text-align: center;
+}
+/*
+Styling for main page
+*/
+#main #page-wrapper {
+	width: 1004px;
+	position: relative;
+	left: 50%;
+	margin-left: -512px;
+}
+
+#main #header {
+	clear: both;
+}
+#main #header #logo {
+	float: left;
+	height: 100px;
+	margin: 0px;
+	border: 0px;
+}
+
+a img {
+	border: 0px;
+	text-decoration: none;
+}
+
+#main #header #menu {
+	float: right;
+	margin-top: -16px;
+}
+
+#main #header #menu li {
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+	list-style-type: none;
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	vertical-align: bottom;
+	color: #f8feff;
+	background-color: #ea63ff;
+	margin: 0;
+	font: 24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	overflow: hidden;
+}
+
+#main #header #menu li a {
+	color: white;
+	text-decoration: none;
+	background-color: #ea63ff;
+	width: 100px;
+	height: 100px;
+	display: block;
+	line-height: 150px;
+	overflow: hidden;
+}
+
+#main #header #menu li a:hover {
+	color: white;
+	text-decoration: none;
+	background-color: #f98ee0;
+	width: 100px;
+	height: 100px;
+	display: block;
+	line-height: 150px;
+	overflow: hidden;
+}
+
+#main #header #user {
+	margin-left: 5px;
+	padding-right: 5px;
+	float: right;
+	height: 100px;
+	width: 195px;
+	text-align: right;
+	background-color: #c5ec60;
+}
+#main #content {
+	clear: both;
+	background-color: white;
+	text-align: left;
+}
+
+#main #content #sidebar {
+	float: right;
+	padding: 5px;
+	width: 190px;
+	margin-left: 5px;
+	background-color: #dad1cc;
+	font: 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: #352f2c;
+}
+
+#main #content #workspace {
+	vertical-align: top;
+	padding: 5px;
+	width: 779px;
+	float: left;
+	background-color:  white;
+	margin-left: 10px;
+}
+/*
+Styling for Families
+*/
+.family-row-error {
+	background-color: red;
+}
+
+.family-row {
+	background-color: white;
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+
+/*
+Styling for public facing 
+login page
+*/
+#loginpage #page-wrapper {
+	width: 800px;
+	position: relative;
+	left: 50%;
+	margin-left:  -400px;
+}
+
+#loginpage #sidebar {
+	float: left;
+	width: 350px;
+	height: 200px;
+	vertical-align: middle;
+	line-height: 200px;
+	padding-top: 25px;
+}
+
+#loginpage #content {
+	width: 350px;
+	text-align: center;
+	float:  right;
+	line-height: 200px;
+	height: 200px;
+}
+
+#loginpage #content p#slogan {
+	color: #FFFFFF;
+	font: 20px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	line-height: 200px;
+}
+
+#loginpage #loginform {
+	text-align: center;
+	clear: both;
+	padding-top: 25px;
+}
+
+#loginpage #footer {
+	clear: both;
+}
+
+#loginpage #footer p {
+	color: whitesmoke;
+	font-family: Arial, Helvetica, Geneva, sans-serif;
+}
+
+/*
+Styling for Family Show Page
+*/
+.show_family_name {
+	font-size: 1.7em;
+}

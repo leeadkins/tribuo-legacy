@@ -1,0 +1,9 @@
+<h1>Editing Child</h1>
+
+<%= error_messages_for :child %>
+
+<%= render :partial => @child, 
+  :locals => { :button_name => "Update"} %>
+
+<%= link_to 'Show', [@family, @child] %> |
+<%= link_to 'Back', family_children_path(@family) %>

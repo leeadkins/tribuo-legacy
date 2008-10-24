@@ -1,0 +1,37 @@
+<% content_for :sidebar do %>
+	<p>
+		You can modify certain aspects of 
+		how Tribuo operates in the Settings field.
+		You can also add custom settings you may need
+		for external plugins you've developed.
+	</p>
+	
+	<p>
+		Take caution when modifying these values, though. Most
+		are automatically generated when you perform certain actions,
+		like processing cutoffs, etc.
+	</p>
+<% end %>
+<h1>Tribuo Settings</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Value</th>
+    <th>Friendly Name</th>
+  </tr>
+
+<% for setting in @settings %>
+  <tr>
+    <td><%=h setting.name %></td>
+    <td><%=h setting.value %></td>
+    <td><%=h setting.friendly %></td>
+    <td><%= link_to 'Show', setting %></td>
+    <td><%= link_to 'Edit', edit_setting_path(setting) %></td>
+    <td><%= link_to 'Destroy', setting, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New setting', new_setting_path %>

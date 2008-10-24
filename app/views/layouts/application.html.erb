@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+	  	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+		<title>Tribuo</title>
+		<%= stylesheet_link_tag 'tribuo' %>
+		<%= javascript_include_tag :defaults %>
+		<%= javascript_include_tag "in_place_select_editor" %>
+	</head>
+
+	<body id="main">
+		<div id="page-wrapper">
+			<div id="header"><%= render :partial => 'layouts/header' %>
+			</div>
+			<div id="content">
+				<div id="sidebar">
+					<p><%= flash[:notice] %></p>
+					<%= yield :sidebar %>
+				</div>
+				<div id="workspace">
+					<%= yield %>
+				</div>
+			</div>	
+			<div id="footer">
+				
+			</div>
+		</div>
+	</body>
+</html>
