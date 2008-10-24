@@ -24821,3 +24821,15 @@ Rendering template within layouts/application
 Rendering families/index
 Rendered layouts/_header (0.00238)
 Completed in 0.02760 (36 reqs/sec) | Rendering: 0.01014 (36%) | DB: 0.00082 (2%) | 200 OK [http://0.0.0.0/families]
+  [4;36;1mSQL (0.000341)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000687)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.002700)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.002125)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000423)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000177)[0m   [0mSELECT version FROM schema_migrations[0m
