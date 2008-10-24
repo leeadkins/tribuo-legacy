@@ -24760,3 +24760,64 @@ Rendering template within layouts/application
 Rendering families/index
 Rendered layouts/_header (0.00229)
 Completed in 0.02624 (38 reqs/sec) | Rendering: 0.00783 (29%) | DB: 0.00086 (3%) | 200 OK [http://192.168.1.107/families]
+
+
+Processing FamiliesController#show (for 127.0.0.1 at 2008-10-23 23:02:46) [GET]
+  Session ID: 35c89c6230adb36f4c2bd1cca6471267
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"families"}
+  [4;36;1mUser Load (0.000179)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."remember_token" = '08fae6dc3ea107b3ee3fdcbda894c4755bd5be5d') LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.01459 (68 reqs/sec) | DB: 0.00018 (1%) | 302 Found [http://0.0.0.0/families/1]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2008-10-23 23:02:46) [GET]
+  Session ID: BAh7BzoOcmV0dXJuX3RvIhAvZmFtaWxpZXMvMSIKZmxhc2hJQzonQWN0aW9u
+Q29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--a943687e33c64625842b1d7ef797b0c749bddd72
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/sessions
+Rendering sessions/new
+Completed in 0.00659 (151 reqs/sec) | Rendering: 0.00437 (66%) | DB: 0.00000 (0%) | 200 OK [http://0.0.0.0/session/new]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2008-10-23 23:02:55) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIhAvZmFtaWxpZXMvMToMY3NyZl9pZCIlYjY3MjA3
+ZjhmODU3MGZlNDczOGM2MjE4N2VhN2ZiNmMiCmZsYXNoSUM6J0FjdGlvbkNv
+bnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--d7ff8568395ac98508d794a07d25118e01c70aa9
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"f9d86a6d0a8598e38e98ef89fd2cfd3ca8de2d00", "action"=>"create", "controller"=>"sessions", "password"=>"revolution", "login"=>"leeadkins"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;35;1mUser Load (0.000414)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'leeadkins') LIMIT 1[0m
+Cookie set: auth_token=; path=/
+Redirected to http://0.0.0.0:3000/families/1
+Completed in 0.02036 (49 reqs/sec) | DB: 0.00041 (2%) | 302 Found [http://0.0.0.0/session]
+
+
+Processing FamiliesController#show (for 127.0.0.1 at 2008-10-23 23:02:55) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiViNjcyMDdm
+OGY4NTcwZmU0NzM4YzYyMTg3ZWE3ZmI2YyIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dlZCBp
+biBzdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlG--926b2dcd7881d7dc514bc4ee07826e7668f02860
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"families"}
+  [4;36;1mUser Load (0.000473)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mFamily Load (0.000531)[0m   [0mSELECT * FROM "families" WHERE ("families"."id" = 1) [0m
+  [4;36;1mChild Load (0.000918)[0m   [0;1mSELECT "children".* FROM "children" WHERE ("children".family_id IN (1)) [0m
+Rendering template within layouts/application
+Rendering families/show
+  [4;35;1mUser Load (0.000428)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered children/_child (0.00115)
+Rendered layouts/_header (0.00271)
+Completed in 0.12637 (7 reqs/sec) | Rendering: 0.01705 (13%) | DB: 0.00235 (1%) | 200 OK [http://0.0.0.0/families/1]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-10-23 23:02:57) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiViNjcyMDdm
+OGY4NTcwZmU0NzM4YzYyMTg3ZWE3ZmI2YyIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dlZCBp
+biBzdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlU--ab631566c23fd61059670266d6e9459f331f6b0b
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;36;1mUser Load (0.000363)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mFamily Load (0.000456)[0m   [0mSELECT * FROM "families" [0m
+Rendering template within layouts/application
+Rendering families/index
+Rendered layouts/_header (0.00238)
+Completed in 0.02760 (36 reqs/sec) | Rendering: 0.01014 (36%) | DB: 0.00082 (2%) | 200 OK [http://0.0.0.0/families]
