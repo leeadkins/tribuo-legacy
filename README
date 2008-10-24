@@ -4,6 +4,7 @@ Help track bugs at http://ravsonic.lighthouseapp.com/projects/18756-tribuo/overv
 
 This is a very rough start for the project, and you'll see more as we go along.
 Many of the initial commits you see will be from me setting up this stranage workflow I'm using for Tribuo.
+These include Lighthouse, Github, and Heroku.
 For now, there are few things you'll need to do to get going.
 
 You'll need to create a database.yml file that works for you.
