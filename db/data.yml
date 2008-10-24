@@ -1,0 +1,131 @@
+
+--- 
+users: 
+  columns: 
+  - id
+  - login
+  - name
+  - email
+  - crypted_password
+  - salt
+  - created_at
+  - updated_at
+  - remember_token
+  - remember_token_expires_at
+  - role_id
+  records: 
+  - - "1"
+    - leeadkins
+    - Lee Adkins
+    - lee@ravsonic.com
+    - 9da5204efb811c36380f1276f7c906c24072a577
+    - 67dcb7de5c66970e021d45abc311c7a5f45c70bf
+    - 2008-10-24 03:52:38.810099
+    - 2008-10-24 03:52:38.919462
+    - 
+    - 
+    - "1"
+
+--- 
+roles: 
+  columns: 
+  - id
+  - name
+  - editown
+  - editall
+  - admin
+  - created_at
+  - updated_at
+  records: 
+  - - "1"
+    - admin
+    - "1"
+    - "1"
+    - "1"
+    - 2008-10-24 03:52:38.890834
+    - 2008-10-24 03:52:38.890834
+
+--- 
+children: 
+  columns: 
+  - id
+  - name
+  - gender
+  - age
+  - agetype
+  - family_id
+  - created_at
+  - updated_at
+  records: 
+  - - "1"
+    - Sally
+    - "1"
+    - "4"
+    - "0"
+    - "1"
+    - 2008-10-24 03:54:56.029058
+    - 2008-10-24 03:54:56.029058
+  - - "2"
+    - Jimmy
+    - "0"
+    - "3"
+    - "0"
+    - "1"
+    - 2008-10-24 03:54:56.054048
+    - 2008-10-24 03:54:56.054048
+
+--- 
+families: 
+  columns: 
+  - id
+  - lastname
+  - firstname
+  - phone
+  - address
+  - directions
+  - familysize
+  - childrensize
+  - foodonly
+  - box
+  - user_id
+  - created_at
+  - updated_at
+  - children_count
+  records: 
+  - - "1"
+    - Smith
+    - John
+    - 555 555 5555
+    - 333 4th Street
+    - Here
+    - "4"
+    - "2"
+    - "0"
+    - 
+    - "1"
+    - 2008-10-24 03:54:56.021673
+    - 2008-10-24 03:55:06.514843
+    - "2"
+
+--- 
+settings: 
+  columns: 
+  - id
+  - name
+  - value
+  - friendly
+  - created_at
+  - updated_at
+  records: 
+  - - "1"
+    - boxgenerated
+    - "0"
+    - Have numbers been generated? 0 for no, 1 for yes
+    - 2008-10-24 03:52:52.618608
+    - 2008-10-24 03:52:52.618608
+  - - "2"
+    - lastbox
+    - "0"
+    - Contains the last box number generated
+    - 2008-10-24 03:52:52.623935
+    - 2008-10-24 03:52:52.623935
