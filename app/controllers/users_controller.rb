@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   # Be sure to include AuthenticationSystem in Application Controller instead
   #(by Lee: Done! Thanks Rick!)
   # render new.rhtml
+  before_filter :login_required, :except => [:new, :create]
   def new
     @user = User.new
   end
@@ -25,7 +26,39 @@ class UsersController < ApplicationController
   end
   
   def edit
-    @user = User.find(params[:id])
+    unless Role.find(User.find(current_user.id).role).admin == "1"
+      if (current_user.id != params[:id])
+        flash[:notice] = "You do not have permission to edit this user."
+        redirect_to :families
+      else
+        @user = User.find(params[:id])
+      end
+    end
+  end
+  
+  def update
+    def update
+      unless Role.find(User.find(current_user.id).role).admin == "1"
+        if (current_user.id != params[:id])
+          flash[:notice] = "You do not have permission to edit this user."
+          redirect_to :families
+        else
+          @user = User.find(params[:id])
+        end
+      end
+      respond_to do |format|
+        if @user.update_attributes(params[:user])
+          flash[:notice] = 'User was successfully updated.'
+          format.html { redirect_to(@user) }
+          format.xml  { head :ok }
+          format.json { render :json => @user }
+        else
+          format.html { render :action => "edit" }
+          format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
+          format.json { render :json => @user, :status => :unprocessable_entity}
+        end
+      end
+    end
   end
   
   def show
