@@ -41,7 +41,7 @@ class UsersController < ApplicationController
       unless Role.find(User.find(current_user.id).role).admin == "1"
         if (current_user.id != params[:id])
           flash[:notice] = "You do not have permission to edit this user."
-          redirect_to :families
+          redirect_to :controller => "families", :action => "index"
         else
           @user = User.find(params[:id])
         end
