@@ -2398,3 +2398,991 @@ Rendering families/new
 Rendered families/_child (0.00072)
 Rendered layouts/_header (0.00263)
 Completed in 0.03964 (25 reqs/sec) | Rendering: 0.01281 (32%) | DB: 0.00038 (0%) | 200 OK [http://0.0.0.0/families/new]
+
+
+Processing InvitationsController#new (for 127.0.0.1 at 2008-11-09 14:05:09) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4MTI3Njll
+OTVhZjY5M2Q0ZTVkMzJiYmQ4YzM0Zjg4NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--259b9405c097b8a5c3f521dd105506fb390f5d5e
+  Parameters: {"action"=>"new", "controller"=>"invitations"}
+  [4;35;1mUser Load (0.000466)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering invitations/new
+Rendered layouts/_header (0.00347)
+Completed in 0.03115 (32 reqs/sec) | Rendering: 0.00752 (24%) | DB: 0.00047 (1%) | 200 OK [http://0.0.0.0/invitations/new]
+
+
+Processing InvitationsController#create (for 127.0.0.1 at 2008-11-09 14:05:15) [POST]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4MTI3Njll
+OTVhZjY5M2Q0ZTVkMzJiYmQ4YzM0Zjg4NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--259b9405c097b8a5c3f521dd105506fb390f5d5e
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"0f192bafdc33b0cf69ee6fb730ba2a1f1d565e4f", "action"=>"create", "controller"=>"invitations", "invitation"=>{"recipient_email"=>"uahgekido@gmail.com"}}
+  [4;36;1mUser Load (0.000436)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000202)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'uahgekido@gmail.com') LIMIT 1[0m
+  [4;36;1mUser Update (0.000417)[0m   [0;1mUPDATE "users" SET "invitation_limit" = 4, "updated_at" = '2008-11-09 20:05:15' WHERE "id" = 1[0m
+  [4;35;1mInvitation Create (0.000149)[0m   [0mINSERT INTO "invitations" ("updated_at", "token", "recipient_email", "sent_at", "sender_id", "created_at") VALUES('2008-11-09 20:05:15', 'f8854805623ec2db570ff0495a1a54b2905bb4c4', 'uahgekido@gmail.com', NULL, 1, '2008-11-09 20:05:15')[0m
+Redirected to http://0.0.0.0:3000/families
+Completed in 0.03125 (31 reqs/sec) | DB: 0.00120 (3%) | 302 Found [http://0.0.0.0/invitations]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-09 14:05:15) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4MTI3Njll
+OTVhZjY5M2Q0ZTVkMzJiYmQ4YzM0Zjg4NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiJUludml0YXRp
+b24gd2FzIHN1Y2Nlc3NmdWxseSBzZW4uBjoKQHVzZWR7BjsJRg==--048433be99e5fd6f8338d82210850772fc7e0a48
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;36;1mUser Load (0.000389)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mFamily Load (0.000496)[0m   [0mSELECT * FROM "families" [0m
+Rendering template within layouts/application
+Rendering families/index
+Rendered layouts/_header (0.00255)
+Completed in 0.02763 (36 reqs/sec) | Rendering: 0.00853 (30%) | DB: 0.00089 (3%) | 200 OK [http://0.0.0.0/families]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-11-09 14:05:21) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4MTI3Njll
+OTVhZjY5M2Q0ZTVkMzJiYmQ4YzM0Zjg4NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiJUludml0YXRp
+b24gd2FzIHN1Y2Nlc3NmdWxseSBzZW4uBjoKQHVzZWR7BjsJVA==--1cfd8086246f9f1cc29a116f13a70464db9c4ea5
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/invitatinos" with {:method=>:get}):
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing InvitationsController#index (for 127.0.0.1 at 2008-11-09 14:05:24) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4MTI3Njll
+OTVhZjY5M2Q0ZTVkMzJiYmQ4YzM0Zjg4NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--259b9405c097b8a5c3f521dd105506fb390f5d5e
+  Parameters: {"action"=>"index", "controller"=>"invitations"}
+  [4;36;1mUser Load (0.000451)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mInvitation Load (0.000379)[0m   [0mSELECT * FROM "invitations" [0m
+Rendering template within layouts/application
+Rendering invitations/index
+Rendered layouts/_header (0.00295)
+Completed in 0.02912 (34 reqs/sec) | Rendering: 0.00872 (29%) | DB: 0.00083 (2%) | 200 OK [http://0.0.0.0/invitations]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-11-09 14:05:30) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4MTI3Njll
+OTVhZjY5M2Q0ZTVkMzJiYmQ4YzM0Zjg4NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--259b9405c097b8a5c3f521dd105506fb390f5d5e
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/signup" with {:method=>:get}):
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2008-11-09 14:05:32) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4MTI3Njll
+OTVhZjY5M2Q0ZTVkMzJiYmQ4YzM0Zjg4NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--259b9405c097b8a5c3f521dd105506fb390f5d5e
+  Parameters: {"action"=>"new", "controller"=>"users", "invitation_token"=>"f8854805623ec2db570ff0495a1a54b2905bb4c4"}
+  [4;36;1mInvitation Load (0.000349)[0m   [0;1mSELECT * FROM "invitations" WHERE ("invitations"."token" = 'f8854805623ec2db570ff0495a1a54b2905bb4c4') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mUser Load (0.000478)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.00199)
+Completed in 0.03214 (31 reqs/sec) | Rendering: 0.00809 (25%) | DB: 0.00083 (2%) | 200 OK [http://0.0.0.0/signup/f8854805623ec2db570ff0495a1a54b2905bb4c4]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2008-11-09 14:05:50) [POST]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4MTI3Njll
+OTVhZjY5M2Q0ZTVkMzJiYmQ4YzM0Zjg4NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--259b9405c097b8a5c3f521dd105506fb390f5d5e
+  Parameters: {"user"=>{"name"=>"Lee", "password_confirmation"=>"lwa0525", "invitation_token"=>"f8854805623ec2db570ff0495a1a54b2905bb4c4", "login"=>"uahgekido", "password"=>"lwa0525", "email"=>"uahgekido@gmail.com"}, "commit"=>"Sign up", "authenticity_token"=>"0f192bafdc33b0cf69ee6fb730ba2a1f1d565e4f", "action"=>"create", "controller"=>"users"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mInvitation Load (0.000340)[0m   [0;1mSELECT * FROM "invitations" WHERE ("invitations"."token" = 'f8854805623ec2db570ff0495a1a54b2905bb4c4') LIMIT 1[0m
+  [4;35;1mSQL (0.000127)[0m   [0mSELECT "login" FROM "users" WHERE ("users".login = 'uahgekido') [0m
+  [4;36;1mSQL (0.000081)[0m   [0;1mSELECT "email" FROM "users" WHERE ("users".email = 'uahgekido@gmail.com') [0m
+  [4;35;1mSQL (0.000070)[0m   [0mSELECT "invitation_id" FROM "users" WHERE ("users".invitation_id = 1) [0m
+  [4;36;1mUser Create (0.000409)[0m   [0;1mINSERT INTO "users" ("name", "salt", "updated_at", "crypted_password", "remember_token_expires_at", "role_id", "invitation_id", "remember_token", "login", "email", "created_at", "invitation_limit") VALUES('Lee', '8245c588f14ad15fedc9a030c54a50b372fbdd37', '2008-11-09 20:05:50', 'd5394e50e7bbe72071f4491de73dbdf21f20de5b', NULL, NULL, 1, NULL, 'uahgekido', 'uahgekido@gmail.com', '2008-11-09 20:05:50', 5)[0m
+Redirected to http://0.0.0.0:3000/
+Completed in 0.02626 (38 reqs/sec) | DB: 0.00103 (3%) | 302 Found [http://0.0.0.0/users]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-09 14:05:50) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkHOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4MTI3Njll
+OTVhZjY5M2Q0ZTVkMzJiYmQ4YzM0Zjg4NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiUlRoYW5rcyBm
+b3Igc2lnbmluZyB1cCEgIFdlJ3JlIHNlbmRpbmcgeW91IGFuIGVtYWlsIHdp
+dGggeW91ciBhY3RpdmF0aW9uIGNvZGUuBjoKQHVzZWR7BjsJRg==--17e7e71d620d2c8d5b11ea775748cd33bd722f0d
+  Parameters: {"action"=>"index", "controller"=>"main"}
+  [4;35;1mUser Load (0.000394)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering main/index
+Rendered layouts/_header (0.00256)
+Completed in 0.01812 (55 reqs/sec) | Rendering: 0.00423 (23%) | DB: 0.00039 (2%) | 200 OK [http://0.0.0.0/]
+
+
+Processing InvitationsController#new (for 127.0.0.1 at 2008-11-09 14:06:00) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkHOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4MTI3Njll
+OTVhZjY5M2Q0ZTVkMzJiYmQ4YzM0Zjg4NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiUlRoYW5rcyBm
+b3Igc2lnbmluZyB1cCEgIFdlJ3JlIHNlbmRpbmcgeW91IGFuIGVtYWlsIHdp
+dGggeW91ciBhY3RpdmF0aW9uIGNvZGUuBjoKQHVzZWR7BjsJVA==--fd80a37a2304e4a4e62d2b8c03be30d2eac92ff7
+  Parameters: {"action"=>"new", "controller"=>"invitations"}
+  [4;36;1mUser Load (0.000414)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering invitations/new
+Rendered layouts/_header (0.00277)
+Completed in 0.02569 (38 reqs/sec) | Rendering: 0.00631 (24%) | DB: 0.00041 (1%) | 200 OK [http://0.0.0.0/invitations/new]
+
+
+Processing InvitationsController#create (for 127.0.0.1 at 2008-11-09 14:06:04) [POST]
+  Session ID: BAh7CToMdXNlcl9pZGkHOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4MTI3Njll
+OTVhZjY5M2Q0ZTVkMzJiYmQ4YzM0Zjg4NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--e8eb534d7b89fa5d18d5e425c840f72b1921e011
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"0f192bafdc33b0cf69ee6fb730ba2a1f1d565e4f", "action"=>"create", "controller"=>"invitations", "invitation"=>{"recipient_email"=>"lee@ravsonic.com"}}
+  [4;35;1mUser Load (0.000483)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mUser Load (0.000215)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'lee@ravsonic.com') LIMIT 1[0m
+  [4;35;1mUser Update (0.000407)[0m   [0mUPDATE "users" SET "invitation_limit" = 4, "updated_at" = '2008-11-09 20:06:04' WHERE "id" = 2[0m
+  [4;36;1mInvitation Create (0.000177)[0m   [0;1mINSERT INTO "invitations" ("updated_at", "token", "recipient_email", "sent_at", "sender_id", "created_at") VALUES('2008-11-09 20:06:04', 'b79f7e678682ab22c10ec3c76930bffdc96a700c', 'lee@ravsonic.com', NULL, 2, '2008-11-09 20:06:04')[0m
+Redirected to http://0.0.0.0:3000/families
+Completed in 0.03032 (32 reqs/sec) | DB: 0.00128 (4%) | 302 Found [http://0.0.0.0/invitations]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-09 14:06:04) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkHOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4MTI3Njll
+OTVhZjY5M2Q0ZTVkMzJiYmQ4YzM0Zjg4NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiJUludml0YXRp
+b24gd2FzIHN1Y2Nlc3NmdWxseSBzZW4uBjoKQHVzZWR7BjsJRg==--90351607bbe83f7b2069075d77c16a81829d73d7
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;35;1mUser Load (0.000470)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mFamily Load (0.000460)[0m   [0;1mSELECT * FROM "families" [0m
+Rendering template within layouts/application
+Rendering families/index
+Rendered layouts/_header (0.00272)
+Completed in 0.11815 (8 reqs/sec) | Rendering: 0.09742 (82%) | DB: 0.00093 (0%) | 200 OK [http://0.0.0.0/families]
+
+
+Processing InvitationsController#index (for 127.0.0.1 at 2008-11-09 14:06:09) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkHOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4MTI3Njll
+OTVhZjY5M2Q0ZTVkMzJiYmQ4YzM0Zjg4NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiJUludml0YXRp
+b24gd2FzIHN1Y2Nlc3NmdWxseSBzZW4uBjoKQHVzZWR7BjsJVA==--4d258a7eb61f129179e09b01b2814eb7eb7ed550
+  Parameters: {"action"=>"index", "controller"=>"invitations"}
+  [4;35;1mUser Load (0.000431)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mInvitation Load (0.000467)[0m   [0;1mSELECT * FROM "invitations" [0m
+Rendering template within layouts/application
+Rendering invitations/index
+Rendered layouts/_header (0.00323)
+Completed in 0.02772 (36 reqs/sec) | Rendering: 0.00802 (28%) | DB: 0.00090 (3%) | 200 OK [http://0.0.0.0/invitations]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-09 14:23:22) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkHOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4MTI3Njll
+OTVhZjY5M2Q0ZTVkMzJiYmQ4YzM0Zjg4NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--e8eb534d7b89fa5d18d5e425c840f72b1921e011
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;35;1mUser Load (0.000656)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mFamily Load (0.000508)[0m   [0;1mSELECT * FROM "families" [0m
+Rendering template within layouts/application
+Rendering families/index
+Rendered layouts/_header (0.00276)
+Completed in 0.03432 (29 reqs/sec) | Rendering: 0.00990 (28%) | DB: 0.00116 (3%) | 200 OK [http://0.0.0.0/families]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2008-11-09 14:23:23) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkHOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4MTI3Njll
+OTVhZjY5M2Q0ZTVkMzJiYmQ4YzM0Zjg4NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--e8eb534d7b89fa5d18d5e425c840f72b1921e011
+  Parameters: {"action"=>"index", "controller"=>"activities"}
+Rendering template within layouts/application
+Rendering activities/index
+  [4;35;1mUser Load (0.000506)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendered layouts/_header (0.02010)
+Completed in 0.02591 (38 reqs/sec) | Rendering: 0.02279 (87%) | DB: 0.00051 (1%) | 200 OK [http://0.0.0.0/activities]
+  [4;36;1mUser Load (0.000495)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mRole Load (0.000433)[0m   [0mSELECT * FROM "roles" WHERE ("roles"."id" = 1) [0m
+  [4;36;1mUser Load (0.000386)[0m   [0;1mSELECT * FROM "users" WHERE ("users".role_id = 1) [0m
+  [4;35;1mSQL (0.000242)[0m   [0mSELECT "login" FROM "users" WHERE ("users".login = 'admin' AND "users".id <> 1) [0m
+  [4;36;1mSQL (0.000123)[0m   [0;1mSELECT "email" FROM "users" WHERE ("users".email = 'me@here.com' AND "users".id <> 1) [0m
+  [4;35;1mSQL (0.000236)[0m   [0mSELECT "login" FROM "users" WHERE ("users".login = 'admin' AND "users".id <> 1) [0m
+  [4;36;1mSQL (0.000217)[0m   [0;1mSELECT "email" FROM "users" WHERE ("users".email = 'me@here.com' AND "users".id <> 1) [0m
+  [4;36;1mUser Load (0.000416)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.000256)[0m   [0mSELECT "login" FROM "users" WHERE ("users".login = 'admin' AND "users".id <> 1) [0m
+  [4;36;1mSQL (0.000122)[0m   [0;1mSELECT "email" FROM "users" WHERE ("users".email = 'me@here.com' AND "users".id <> 1) [0m
+  [4;35;1mSQL (0.000173)[0m   [0mSELECT "login" FROM "users" WHERE ("users".login = 'admin' AND "users".id <> 1) [0m
+  [4;36;1mSQL (0.000088)[0m   [0;1mSELECT "email" FROM "users" WHERE ("users".email = 'me@here.com' AND "users".id <> 1) [0m
+  [4;35;1mUser Load (0.000546)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSQL (0.000245)[0m   [0;1mSELECT "login" FROM "users" WHERE ("users".login = 'admin' AND "users".id <> 1) [0m
+  [4;35;1mSQL (0.000122)[0m   [0mSELECT "email" FROM "users" WHERE ("users".email = 'me@here.com' AND "users".id <> 1) [0m
+  [4;36;1mSQL (0.000231)[0m   [0;1mSELECT "login" FROM "users" WHERE ("users".login = 'admin' AND "users".id <> 1) [0m
+  [4;35;1mSQL (0.000123)[0m   [0mSELECT "email" FROM "users" WHERE ("users".email = 'me@here.com' AND "users".id <> 1) [0m
+  [4;36;1mUser Load (0.000502)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-09 14:38:10) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkHOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4MTI3Njll
+OTVhZjY5M2Q0ZTVkMzJiYmQ4YzM0Zjg4NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--e8eb534d7b89fa5d18d5e425c840f72b1921e011
+  Parameters: {"action"=>"index", "controller"=>"main"}
+  [4;36;1mUser Load (0.000430)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering main/index
+Rendered layouts/_header (0.00570)
+Completed in 0.02769 (36 reqs/sec) | Rendering: 0.01083 (39%) | DB: 0.00043 (1%) | 200 OK [http://0.0.0.0/]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-11-09 14:38:14) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkHOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4MTI3Njll
+OTVhZjY5M2Q0ZTVkMzJiYmQ4YzM0Zjg4NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--e8eb534d7b89fa5d18d5e425c840f72b1921e011
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"users"}
+  [4;35;1mUser Load (0.000525)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;36;1mUser Load (0.000443)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_header (0.00094)
+Completed in 0.06329 (15 reqs/sec) | Rendering: 0.04682 (73%) | DB: 0.00097 (1%) | 200 OK [http://0.0.0.0/users/2]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2008-11-09 14:38:18) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkHOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU4MTI3Njll
+OTVhZjY5M2Q0ZTVkMzJiYmQ4YzM0Zjg4NiIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--e8eb534d7b89fa5d18d5e425c840f72b1921e011
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://0.0.0.0:3000/
+Completed in 0.09491 (10 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://0.0.0.0/logout]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-09 14:38:18) [GET]
+  Session ID: BAh7BzoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiHllvdSBoYXZlIGJlZW4gbG9n
+Z2VkIG91dC4GOgpAdXNlZHsGOwdG--6656675f7a42deec4b4e31b4c58ac6a2d3ac3411
+  Parameters: {"action"=>"index", "controller"=>"main"}
+Redirected to http://0.0.0.0:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00089 (1128 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://0.0.0.0/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2008-11-09 14:38:18) [GET]
+  Session ID: BAh7BzoOcmV0dXJuX3RvIgYvIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy
+OjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSIeWW91IGhhdmUgYmVlbiBs
+b2dnZWQgb3V0LgY6CkB1c2VkewY7B1Q=--0948c6ce72aaa8b28622135aa2bd783566649c85
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/sessions
+Rendering sessions/new
+Completed in 0.00687 (145 reqs/sec) | Rendering: 0.00452 (65%) | DB: 0.00000 (0%) | 200 OK [http://0.0.0.0/session/new]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2008-11-09 14:38:21) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgYvOgxjc3JmX2lkIiUzYWJmMDM5Yzk4MjRiYmU1
+ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6
+Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7e50c11de1445c69e2cb51632493ca29ff8dbfe2
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"d94b14fc64dd0ff8a92f87eaea63986d80c569e6", "action"=>"create", "controller"=>"sessions", "password"=>"admin", "login"=>"admin"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;35;1mUser Load (0.000460)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+Cookie set: auth_token=; path=/
+Redirected to http://0.0.0.0:3000/
+Completed in 0.01722 (58 reqs/sec) | DB: 0.00046 (2%) | 302 Found [http://0.0.0.0/session]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-09 14:38:22) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dlZCBp
+biBzdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlG--3842345310a1f9b4c33c85beeef170cfe28ba7a1
+  Parameters: {"action"=>"index", "controller"=>"main"}
+  [4;36;1mUser Load (0.000429)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering main/index
+Rendered layouts/_header (0.00268)
+Completed in 0.02033 (49 reqs/sec) | Rendering: 0.00442 (21%) | DB: 0.00043 (2%) | 200 OK [http://0.0.0.0/]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-11-09 14:38:23) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dlZCBp
+biBzdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlU--c0a1e3de96abbfeb6f08cc680aee49da74591c80
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Load (0.000447)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000451)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_header (0.00069)
+Completed in 0.02177 (45 reqs/sec) | Rendering: 0.00459 (21%) | DB: 0.00090 (4%) | 200 OK [http://0.0.0.0/users/1]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2008-11-09 14:38:25) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Load (0.000393)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000407)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_header (0.00067)
+Completed in 0.02286 (43 reqs/sec) | Rendering: 0.00814 (35%) | DB: 0.00080 (3%) | 200 OK [http://0.0.0.0/users/1/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2008-11-09 14:38:33) [PUT]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"user"=>{"name"=>"Lee Adkins", "password_confirmation"=>"lwa0525", "login"=>"leeadkins", "password"=>"lwa0525", "email"=>"me@here.com"}, "authenticity_token"=>"d94b14fc64dd0ff8a92f87eaea63986d80c569e6", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Load (0.000506)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000471)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.000172)[0m   [0mSELECT "login" FROM "users" WHERE ("users".login = 'leeadkins' AND "users".id <> 1) [0m
+  [4;36;1mSQL (0.000082)[0m   [0;1mSELECT "email" FROM "users" WHERE ("users".email = 'me@here.com' AND "users".id <> 1) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_header (0.00078)
+Completed in 0.02780 (35 reqs/sec) | Rendering: 0.00473 (17%) | DB: 0.00123 (4%) | 200 OK [http://0.0.0.0/users/1]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2008-11-09 14:38:41) [PUT]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"user"=>{"name"=>"Lee Adkins", "password_confirmation"=>"lwa0525", "login"=>"leeadkins", "password"=>"lwa0525", "email"=>"me@here.com"}, "authenticity_token"=>"d94b14fc64dd0ff8a92f87eaea63986d80c569e6", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Load (0.000381)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000396)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.000143)[0m   [0mSELECT "login" FROM "users" WHERE ("users".login = 'leeadkins' AND "users".id <> 1) [0m
+  [4;36;1mSQL (0.000080)[0m   [0;1mSELECT "email" FROM "users" WHERE ("users".email = 'me@here.com' AND "users".id <> 1) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_header (0.00065)
+Completed in 0.02303 (43 reqs/sec) | Rendering: 0.00356 (15%) | DB: 0.00100 (4%) | 200 OK [http://0.0.0.0/users/1]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2008-11-09 14:38:42) [PUT]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"user"=>{"name"=>"Lee Adkins", "password_confirmation"=>"lwa0525", "login"=>"leeadkins", "password"=>"lwa0525", "email"=>"me@here.com"}, "authenticity_token"=>"d94b14fc64dd0ff8a92f87eaea63986d80c569e6", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Load (0.000410)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000420)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.000168)[0m   [0mSELECT "login" FROM "users" WHERE ("users".login = 'leeadkins' AND "users".id <> 1) [0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mSELECT "email" FROM "users" WHERE ("users".email = 'me@here.com' AND "users".id <> 1) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_header (0.00068)
+Completed in 0.02383 (41 reqs/sec) | Rendering: 0.00372 (15%) | DB: 0.00109 (4%) | 200 OK [http://0.0.0.0/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-11-09 14:38:43) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Load (0.000428)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000472)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_header (0.00074)
+Completed in 0.02215 (45 reqs/sec) | Rendering: 0.00482 (21%) | DB: 0.00090 (4%) | 200 OK [http://0.0.0.0/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-11-09 14:38:46) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Load (0.000388)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000430)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_header (0.00066)
+Completed in 0.01957 (51 reqs/sec) | Rendering: 0.00426 (21%) | DB: 0.00082 (4%) | 200 OK [http://0.0.0.0/users/1]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2008-11-09 14:38:49) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Load (0.000453)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000449)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_header (0.00071)
+Completed in 0.02265 (44 reqs/sec) | Rendering: 0.00621 (27%) | DB: 0.00090 (3%) | 200 OK [http://0.0.0.0/users/1/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2008-11-09 14:38:55) [PUT]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"user"=>{"name"=>"Lee Adkins", "password_confirmation"=>"", "login"=>"admin", "password"=>"", "email"=>"me@here.com"}, "authenticity_token"=>"d94b14fc64dd0ff8a92f87eaea63986d80c569e6", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Load (0.000405)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000392)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.000142)[0m   [0mSELECT "login" FROM "users" WHERE ("users".login = 'admin' AND "users".id <> 1) [0m
+  [4;36;1mSQL (0.000081)[0m   [0;1mSELECT "email" FROM "users" WHERE ("users".email = 'me@here.com' AND "users".id <> 1) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_header (0.00067)
+Completed in 0.02335 (42 reqs/sec) | Rendering: 0.00377 (16%) | DB: 0.00102 (4%) | 200 OK [http://0.0.0.0/users/1]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2008-11-09 14:38:59) [PUT]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"user"=>{"name"=>"Lee", "password_confirmation"=>"", "login"=>"admin", "password"=>"", "email"=>"me@here.com"}, "authenticity_token"=>"d94b14fc64dd0ff8a92f87eaea63986d80c569e6", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Load (0.000518)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000475)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.000179)[0m   [0mSELECT "login" FROM "users" WHERE ("users".login = 'admin' AND "users".id <> 1) [0m
+  [4;36;1mSQL (0.000094)[0m   [0;1mSELECT "email" FROM "users" WHERE ("users".email = 'me@here.com' AND "users".id <> 1) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_header (0.00071)
+Completed in 0.02539 (39 reqs/sec) | Rendering: 0.00406 (15%) | DB: 0.00127 (4%) | 200 OK [http://0.0.0.0/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-11-09 14:39:02) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Load (0.000386)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000384)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_header (0.00067)
+Completed in 0.01930 (51 reqs/sec) | Rendering: 0.00436 (22%) | DB: 0.00077 (3%) | 200 OK [http://0.0.0.0/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-11-09 14:40:47) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Load (0.000409)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000418)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_header (0.00068)
+Completed in 0.02017 (49 reqs/sec) | Rendering: 0.00433 (21%) | DB: 0.00083 (4%) | 200 OK [http://0.0.0.0/users/1]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2008-11-09 14:40:49) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Load (0.000443)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000390)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Rendered layouts/_header (0.00072)
+Completed in 0.02320 (43 reqs/sec) | Rendering: 0.00598 (25%) | DB: 0.00083 (3%) | 200 OK [http://0.0.0.0/users/1/edit]
+
+
+Processing UsersController#update (for 127.0.0.1 at 2008-11-09 14:40:57) [PUT]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"user"=>{"name"=>"Lee", "password_confirmation"=>"", "login"=>"admin", "password"=>"", "email"=>"me@here.com"}, "authenticity_token"=>"d94b14fc64dd0ff8a92f87eaea63986d80c569e6", "_method"=>"put", "action"=>"update", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Load (0.000388)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.000379)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.000133)[0m   [0mSELECT "login" FROM "users" WHERE ("users".login = 'admin' AND "users".id <> 1) [0m
+  [4;36;1mSQL (0.000078)[0m   [0;1mSELECT "email" FROM "users" WHERE ("users".email = 'me@here.com' AND "users".id <> 1) [0m
+  [4;35;1mUser Update (0.094601)[0m   [0mUPDATE "users" SET "name" = 'Lee', "updated_at" = '2008-11-09 20:40:57' WHERE "id" = 1[0m
+Redirected to http://0.0.0.0:3000/users/1
+Completed in 0.12509 (7 reqs/sec) | DB: 0.09558 (76%) | 302 Found [http://0.0.0.0/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-11-09 14:40:57) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiI1VzZXIgd2Fz
+IHN1Y2Nlc3NmdWxseSB1cGRhdGVkLgY6CkB1c2VkewY7CUY=--8ffc301da5659e1d0bfb362c2a2fd5f6822c9f69
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Load (0.000430)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000473)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_header (0.00090)
+Completed in 0.11756 (8 reqs/sec) | Rendering: 0.00871 (7%) | DB: 0.00090 (0%) | 200 OK [http://0.0.0.0/users/1]
+  [4;36;1mSQL (0.000301)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000228)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.001459)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.001215)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000270)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000214)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000098)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000092)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000091)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000096)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000098)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000097)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000089)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000117)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20081010053117)
+  [4;36;1mSQL (0.000100)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000236)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.002061)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(40) DEFAULT NULL NULL, "name" varchar(100) DEFAULT '' NULL, "email" varchar(100) DEFAULT NULL NULL, "crypted_password" varchar(40) DEFAULT NULL NULL, "salt" varchar(40) DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL, "remember_token" varchar(40) DEFAULT NULL NULL, "remember_token_expires_at" datetime DEFAULT NULL NULL, "role_id" integer DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.001341)[0m   [0mCREATE UNIQUE INDEX "index_users_on_login" ON "users" ("login")[0m
+  [4;36;1mSQL (0.001220)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081010053117')[0m
+Migrating to CreateRoles (20081010053855)
+  [4;35;1mSQL (0.000235)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001609)[0m   [0;1mCREATE TABLE "roles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) DEFAULT NULL NULL, "editown" integer DEFAULT NULL NULL, "editall" integer DEFAULT NULL NULL, "admin" integer DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.001311)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081010053855')[0m
+Migrating to CreateFamilies (20081010055848)
+  [4;36;1mSQL (0.000312)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.002135)[0m   [0mCREATE TABLE "families" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "lastname" varchar(255) DEFAULT NULL NULL, "firstname" varchar(255) DEFAULT NULL NULL, "phone" varchar(255) DEFAULT NULL NULL, "address" varchar(255) DEFAULT NULL NULL, "directions" varchar(255) DEFAULT NULL NULL, "familysize" integer DEFAULT NULL NULL, "childrensize" integer DEFAULT NULL NULL, "foodonly" integer DEFAULT NULL NULL, "box" integer DEFAULT NULL NULL, "user_id" integer DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.001884)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081010055848')[0m
+Migrating to CreateChildren (20081010062305)
+  [4;35;1mSQL (0.000550)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001903)[0m   [0;1mCREATE TABLE "children" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) DEFAULT NULL NULL, "gender" integer DEFAULT NULL NULL, "age" integer DEFAULT NULL NULL, "agetype" integer DEFAULT NULL NULL, "family_id" integer DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.001763)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081010062305')[0m
+Migrating to AddCounterCache (20081010170018)
+  [4;36;1mSQL (0.000875)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.001944)[0m   [0mALTER TABLE "families" ADD "children_count" integer DEFAULT 0[0m
+  [4;36;1mSQL (0.007560)[0m   [0;1mVACUUM[0m
+  [4;35;1mSQL (0.001776)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081010170018')[0m
+Migrating to CreateSettings (20081019194019)
+  [4;36;1mSQL (0.000442)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.001722)[0m   [0mCREATE TABLE "settings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255) DEFAULT NULL NULL, "value" varchar(255) DEFAULT NULL NULL, "friendly" varchar(255) DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;36;1mSetting Create (0.000386)[0m   [0;1mINSERT INTO "settings" ("name", "friendly", "updated_at", "value", "created_at") VALUES('boxgenerated', 'Have numbers been generated? 0 for no, 1 for yes', '2008-11-09 20:53:05', '0', '2008-11-09 20:53:05')[0m
+  [4;35;1mSetting Create (0.000302)[0m   [0mINSERT INTO "settings" ("name", "friendly", "updated_at", "value", "created_at") VALUES('lastbox', 'Contains the last box number generated', '2008-11-09 20:53:05', '0', '2008-11-09 20:53:05')[0m
+  [4;36;1mSQL (0.001754)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081019194019')[0m
+Migrating to CreateInvitations (20081109174700)
+  [4;35;1mSQL (0.000901)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.002568)[0m   [0;1mCREATE TABLE "invitations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sender_id" integer DEFAULT NULL NULL, "recipient_email" varchar(255) DEFAULT NULL NULL, "token" varchar(255) DEFAULT NULL NULL, "sent_at" datetime DEFAULT NULL NULL, "created_at" datetime DEFAULT NULL NULL, "updated_at" datetime DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.002040)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081109174700')[0m
+Migrating to AddInvitationToUsers (20081109174752)
+  [4;36;1mSQL (0.001555)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.002239)[0m   [0mALTER TABLE "users" ADD "invitation_id" integer[0m
+  [4;36;1mSQL (0.008295)[0m   [0;1mVACUUM[0m
+  [4;35;1mSQL (0.002927)[0m   [0mALTER TABLE "users" ADD "invitation_limit" integer[0m
+  [4;36;1mSQL (0.008864)[0m   [0;1mVACUUM[0m
+  [4;35;1mSQL (0.002663)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081109174752')[0m
+Migrating to AddFirstRoleAndUser (20081109180940)
+  [4;36;1mSQL (0.000623)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mUser Create (0.000506)[0m   [0mINSERT INTO "users" ("name", "salt", "updated_at", "crypted_password", "remember_token_expires_at", "role_id", "invitation_id", "remember_token", "login", "email", "created_at", "invitation_limit") VALUES('Lee Adkins', 'e4ba47d535a4226ebef3e1751ad643fa2ee47cb5', '2008-11-09 20:53:05', '20b737c7b95b0cad5db38d881012e9f9140b3f42', NULL, NULL, NULL, NULL, 'admin', 'me@here.com', '2008-11-09 20:53:05', 5)[0m
+  [4;36;1mRole Create (0.000514)[0m   [0;1mINSERT INTO "roles" ("name", "editall", "updated_at", "admin", "editown", "created_at") VALUES('admin', 1, '2008-11-09 20:53:05', 1, 1, '2008-11-09 20:53:05')[0m
+  [4;35;1mUser Load (0.000693)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+  [4;36;1mRole Load (0.000523)[0m   [0;1mSELECT * FROM "roles" WHERE ("roles"."name" = 'admin') LIMIT 1[0m
+  [4;35;1mSQL (0.000246)[0m   [0mSELECT "login" FROM "users" WHERE ("users".login = 'admin' AND "users".id <> 1) [0m
+  [4;36;1mSQL (0.000108)[0m   [0;1mSELECT "email" FROM "users" WHERE ("users".email = 'me@here.com' AND "users".id <> 1) [0m
+  [4;35;1mUser Update (0.000319)[0m   [0mUPDATE "users" SET "role_id" = 1, "updated_at" = '2008-11-09 20:53:05' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.000250)[0m   [0;1mSELECT "login" FROM "users" WHERE ("users".login = 'admin' AND "users".id <> 1) [0m
+  [4;35;1mSQL (0.000082)[0m   [0mSELECT "email" FROM "users" WHERE ("users".email = 'me@here.com' AND "users".id <> 1) [0m
+  [4;36;1mSQL (0.001403)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20081109180940')[0m
+  [4;35;1mSQL (0.000677)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000521)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000071)[0m   [0mPRAGMA index_list("children")[0m
+  [4;36;1mSQL (0.000070)[0m   [0;1mPRAGMA index_list("families")[0m
+  [4;35;1mSQL (0.000063)[0m   [0mPRAGMA index_list("invitations")[0m
+  [4;36;1mSQL (0.000058)[0m   [0;1mPRAGMA index_list("roles")[0m
+  [4;35;1mSQL (0.000051)[0m   [0mPRAGMA index_list("settings")[0m
+  [4;36;1mSQL (0.000154)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.000156)[0m   [0mPRAGMA index_info('index_users_on_login')[0m
+  [4;36;1mUser Load (0.000528)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.000410)[0m   [0mSELECT "login" FROM "users" WHERE ("users".login = 'admin' AND "users".id <> 1) [0m
+  [4;36;1mSQL (0.000128)[0m   [0;1mSELECT "email" FROM "users" WHERE ("users".email = 'me@here.com' AND "users".id <> 1) [0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-11-09 14:55:32) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiI1VzZXIgd2Fz
+IHN1Y2Nlc3NmdWxseSB1cGRhdGVkLgY6CkB1c2VkewY7CVQ=--e58a34bae51450e3907c431db360eecbaac5ac33
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Load (0.000416)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000393)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Rendered layouts/_header (0.00241)
+Completed in 0.02949 (33 reqs/sec) | Rendering: 0.01133 (38%) | DB: 0.00081 (2%) | 200 OK [http://0.0.0.0/users/1]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-09 14:55:34) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;36;1mUser Load (0.000472)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mFamily Load (0.000218)[0m   [0mSELECT * FROM "families" [0m
+Rendering template within layouts/application
+Rendering families/index
+Rendered layouts/_header (0.00276)
+Completed in 0.02874 (34 reqs/sec) | Rendering: 0.00669 (23%) | DB: 0.00069 (2%) | 200 OK [http://0.0.0.0/families]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-09 14:55:35) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;36;1mUser Load (0.000423)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mFamily Load (0.000190)[0m   [0mSELECT * FROM "families" [0m
+Rendering template within layouts/application
+Rendering families/index
+Rendered layouts/_header (0.00278)
+Completed in 0.10293 (9 reqs/sec) | Rendering: 0.00435 (4%) | DB: 0.00061 (0%) | 200 OK [http://0.0.0.0/families]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2008-11-09 14:55:41) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"activities"}
+Rendering template within layouts/application
+Rendering activities/index
+  [4;36;1mUser Load (0.000441)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.01683)
+Completed in 0.02121 (47 reqs/sec) | Rendering: 0.01849 (87%) | DB: 0.00044 (2%) | 200 OK [http://0.0.0.0/activities]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-09 14:56:25) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;35;1mUser Load (0.000386)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.000310)[0m   [0;1mSELECT * FROM "families" [0m
+Rendering template within layouts/application
+Rendering families/index
+Rendered layouts/_header (0.00271)
+Completed in 0.09548 (10 reqs/sec) | Rendering: 0.00431 (4%) | DB: 0.00070 (0%) | 200 OK [http://0.0.0.0/families]
+
+
+Processing SettingsController#index (for 127.0.0.1 at 2008-11-09 14:56:27) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"settings"}
+  [4;35;1mUser Load (0.000390)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSetting Load (0.000532)[0m   [0;1mSELECT * FROM "settings" [0m
+Rendering template within layouts/application
+Rendering settings/index
+Rendered layouts/_header (0.00261)
+Completed in 0.02662 (37 reqs/sec) | Rendering: 0.00821 (30%) | DB: 0.00092 (3%) | 200 OK [http://0.0.0.0/settings]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2008-11-09 14:56:28) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"activities"}
+Rendering template within layouts/application
+Rendering activities/index
+  [4;35;1mUser Load (0.000395)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.01699)
+Completed in 0.02148 (46 reqs/sec) | Rendering: 0.01832 (85%) | DB: 0.00040 (1%) | 200 OK [http://0.0.0.0/activities]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-09 15:31:58) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"main"}
+  [4;36;1mUser Load (0.000484)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering main/index
+Rendered layouts/_header (0.00335)
+Completed in 0.02972 (33 reqs/sec) | Rendering: 0.00647 (21%) | DB: 0.00048 (1%) | 200 OK [http://0.0.0.0/]
+  [4;36;1mUser Load (0.000455)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.000302)[0m   [0mSELECT "login" FROM "users" WHERE ("users".login = 'admin' AND "users".id <> 1) [0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mSELECT "email" FROM "users" WHERE ("users".email = 'me@here.com' AND "users".id <> 1) [0m
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-09 15:32:37) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"main"}
+  [4;35;1mUser Load (0.000431)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering main/index
+Rendered layouts/_header (0.00264)
+Completed in 0.02043 (48 reqs/sec) | Rendering: 0.00433 (21%) | DB: 0.00043 (2%) | 200 OK [http://0.0.0.0/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-09 15:32:39) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"main"}
+  [4;36;1mUser Load (0.000442)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering main/index
+Rendered layouts/_header (0.00293)
+Completed in 0.01887 (52 reqs/sec) | Rendering: 0.00475 (25%) | DB: 0.00044 (2%) | 200 OK [http://0.0.0.0/]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-09 15:32:47) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;35;1mUser Load (0.000407)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.000176)[0m   [0;1mSELECT * FROM "families" [0m
+Rendering template within layouts/application
+Rendering families/index
+Rendered layouts/_header (0.00264)
+Completed in 0.02330 (42 reqs/sec) | Rendering: 0.00422 (18%) | DB: 0.00058 (2%) | 200 OK [http://0.0.0.0/families]
+
+
+Processing InvitationsController#new (for 127.0.0.1 at 2008-11-09 15:32:49) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"new", "controller"=>"invitations"}
+  [4;35;1mUser Load (0.000388)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering invitations/new
+Rendered layouts/_header (0.00321)
+Completed in 0.08299 (12 reqs/sec) | Rendering: 0.02257 (27%) | DB: 0.00039 (0%) | 200 OK [http://0.0.0.0/invitations/new]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-09 15:32:50) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;36;1mUser Load (0.000438)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mFamily Load (0.000193)[0m   [0mSELECT * FROM "families" [0m
+Rendering template within layouts/application
+Rendering families/index
+Rendered layouts/_header (0.00301)
+Completed in 0.10193 (9 reqs/sec) | Rendering: 0.00459 (4%) | DB: 0.00063 (0%) | 200 OK [http://0.0.0.0/families]
+  [4;35;1mUser Load (0.000710)[0m   [0mSELECT * FROM "users" [0m
+  [4;36;1mUser Load (0.000532)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.000224)[0m   [0mSELECT "login" FROM "users" WHERE ("users".login = 'admin' AND "users".id <> 1) [0m
+  [4;36;1mSQL (0.000120)[0m   [0;1mSELECT "email" FROM "users" WHERE ("users".email = 'me@here.com' AND "users".id <> 1) [0m
+  [4;35;1mUser Update (0.000540)[0m   [0mUPDATE "users" SET "invitation_limit" = 50, "updated_at" = '2008-11-09 21:33:42' WHERE "id" = 1[0m
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-09 15:33:45) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;36;1mUser Load (0.000423)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mFamily Load (0.000182)[0m   [0mSELECT * FROM "families" [0m
+Rendering template within layouts/application
+Rendering families/index
+Rendered layouts/_header (0.00267)
+Completed in 0.02339 (42 reqs/sec) | Rendering: 0.00417 (17%) | DB: 0.00060 (2%) | 200 OK [http://0.0.0.0/families]
+  [4;36;1mSQL (0.000229)[0m   [0;1mSELECT "login" FROM "users" WHERE ("users".login = 'admin' AND "users".id <> 1) [0m
+  [4;35;1mSQL (0.000131)[0m   [0mSELECT "email" FROM "users" WHERE ("users".email = 'me@here.com' AND "users".id <> 1) [0m
+  [4;36;1mUser Update (0.000509)[0m   [0;1mUPDATE "users" SET "invitation_limit" = 56, "updated_at" = '2008-11-09 21:34:11' WHERE "id" = 1[0m
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-09 15:34:16) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;36;1mUser Load (0.000389)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mFamily Load (0.000183)[0m   [0mSELECT * FROM "families" [0m
+Rendering template within layouts/application
+Rendering families/index
+Rendered layouts/_header (0.00264)
+Completed in 0.02308 (43 reqs/sec) | Rendering: 0.00425 (18%) | DB: 0.00057 (2%) | 200 OK [http://0.0.0.0/families]
+
+
+Processing FamiliesController#new (for 127.0.0.1 at 2008-11-09 15:34:41) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"new", "controller"=>"families"}
+  [4;36;1mUser Load (0.000396)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering families/new
+Rendered families/_child (0.00082)
+Rendered layouts/_header (0.00264)
+Completed in 0.09865 (10 reqs/sec) | Rendering: 0.02514 (25%) | DB: 0.00040 (0%) | 200 OK [http://0.0.0.0/families/new]
+
+
+Processing FamiliesController#create (for 127.0.0.1 at 2008-11-09 15:34:58) [POST]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"d94b14fc64dd0ff8a92f87eaea63986d80c569e6", "action"=>"create", "controller"=>"families", "family"=>{"directions"=>"423", "childrensize"=>"0", "lastname"=>"Smith", "firstname"=>"Joe", "familysize"=>"4", "phone"=>"555 555 5555", "address"=>"453 Here or Ther", "foodonly"=>"0"}}
+  [4;35;1mUser Load (0.000573)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Create (0.000616)[0m   [0;1mINSERT INTO "families" ("box", "updated_at", "directions", "childrensize", "lastname", "firstname", "familysize", "phone", "user_id", "children_count", "address", "foodonly", "created_at") VALUES(NULL, '2008-11-09 21:34:58', '423', 0, 'Smith', 'Joe', 4, '555 555 5555', 1, 0, '453 Here or Ther', 0, '2008-11-09 21:34:58')[0m
+Redirected to http://0.0.0.0:3000/families/1
+Completed in 0.02922 (34 reqs/sec) | DB: 0.00119 (4%) | 302 Found [http://0.0.0.0/families]
+
+
+Processing FamiliesController#show (for 127.0.0.1 at 2008-11-09 15:34:58) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiJUZhbWlseSB3
+YXMgc3VjY2Vzc2Z1bGx5IGNyZWF0ZWQuBjoKQHVzZWR7BjsJRg==--3031e36570390734d67d8877052d454acf906bf0
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"families"}
+  [4;35;1mUser Load (0.000485)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.000577)[0m   [0;1mSELECT * FROM "families" WHERE ("families"."id" = 1) [0m
+  [4;35;1mChild Load (0.000212)[0m   [0mSELECT "children".* FROM "children" WHERE ("children".family_id IN (1)) [0m
+Rendering template within layouts/application
+Rendering families/show
+  [4;36;1mUser Load (0.000440)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered children/_child (0.00267)
+Rendered layouts/_header (0.00071)
+Completed in 0.04518 (22 reqs/sec) | Rendering: 0.01538 (34%) | DB: 0.00171 (3%) | 200 OK [http://0.0.0.0/families/1]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-09 15:35:02) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiJUZhbWlseSB3
+YXMgc3VjY2Vzc2Z1bGx5IGNyZWF0ZWQuBjoKQHVzZWR7BjsJVA==--1cfe1554bc544f40ad1bd9c8e447c1f6f5a22e56
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;35;1mUser Load (0.000425)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.000468)[0m   [0;1mSELECT * FROM "families" [0m
+Rendering template within layouts/application
+Rendering families/index
+Rendered layouts/_header (0.00305)
+Completed in 0.02991 (33 reqs/sec) | Rendering: 0.00926 (30%) | DB: 0.00089 (2%) | 200 OK [http://0.0.0.0/families]
+
+
+Processing FamiliesController#show (for 127.0.0.1 at 2008-11-09 15:35:05) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"families"}
+  [4;35;1mUser Load (0.000414)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.000453)[0m   [0;1mSELECT * FROM "families" WHERE ("families"."id" = 1) [0m
+  [4;35;1mChild Load (0.000189)[0m   [0mSELECT "children".* FROM "children" WHERE ("children".family_id IN (1)) [0m
+Rendering template within layouts/application
+Rendering families/show
+  [4;36;1mUser Load (0.000412)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered children/_child (0.00232)
+Rendered layouts/_header (0.00069)
+Completed in 0.11848 (8 reqs/sec) | Rendering: 0.01033 (8%) | DB: 0.00147 (1%) | 200 OK [http://0.0.0.0/families/1]
+
+
+Processing FamiliesController#new (for 127.0.0.1 at 2008-11-09 15:35:07) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"new", "controller"=>"families"}
+  [4;35;1mUser Load (0.000386)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering families/new
+Rendered families/_child (0.00072)
+Rendered layouts/_header (0.00302)
+Completed in 0.03934 (25 reqs/sec) | Rendering: 0.01310 (33%) | DB: 0.00039 (0%) | 200 OK [http://0.0.0.0/families/new]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-09 15:35:08) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;36;1mUser Load (0.000488)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mFamily Load (0.000984)[0m   [0mSELECT * FROM "families" [0m
+Rendering template within layouts/application
+Rendering families/index
+Rendered layouts/_header (0.00265)
+Completed in 0.02970 (33 reqs/sec) | Rendering: 0.00912 (30%) | DB: 0.00147 (4%) | 200 OK [http://0.0.0.0/families]
+
+
+Processing InvitationsController#index (for 127.0.0.1 at 2008-11-09 15:35:14) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"invitations"}
+  [4;36;1mUser Load (0.000430)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mInvitation Load (0.000220)[0m   [0mSELECT * FROM "invitations" [0m
+Rendering template within layouts/application
+Rendering invitations/index
+Rendered layouts/_header (0.00299)
+Completed in 0.02608 (38 reqs/sec) | Rendering: 0.00596 (22%) | DB: 0.00065 (2%) | 200 OK [http://0.0.0.0/invitations]

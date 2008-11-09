@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of   :email
   validates_format_of       :email,    :with => Authentication.email_regex, :message => Authentication.bad_email_message
   
-  validates_presence_of :invitation_id, :message => " is required."
+  validates_presence_of :invitation_id, :on => :create, :message => " is required."
   validates_uniqueness_of :invitation_id, :on => :create, :message => "can only be used once."
 
   has_many :sent_invitations, :class_name => 'Invitation', :foreign_key => 'sender_id'
@@ -68,8 +68,6 @@ class User < ActiveRecord::Base
   def set_invitation_limit
     self.invitation_limit = 5
   end
+  
   protected
-    
-
-
 end
