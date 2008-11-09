@@ -1,4 +1,10 @@
-<h1>New invitation</h1>
+<% content_for :sidebar do %>
+	<p>
+		On this page, you can invite other users to Tribuo. If you run out of invites and need more, contact your administrator.
+	</p>
+<% end %>
+
+<h1>Create a new invitation</h1>
 
 <% form_for(@invitation) do |f| %>
   <%= f.error_messages %>
