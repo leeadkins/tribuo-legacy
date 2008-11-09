@@ -1,4 +1,5 @@
 module AuthenticatedSystem
+  #Let's add a comment in here so it will force push
   protected
     # Returns true or false if the user is logged in.
     # Preloads @current_user with the user model if they're logged in.
