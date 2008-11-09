@@ -1,0 +1,525 @@
+# Logfile created on Sun Nov 09 12:57:46 -0600 2008  [4;36;1mUser Load (0.000630)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.000536)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'quentin') LIMIT 1[0m
+  [4;36;1mSQL (0.000289)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.000168)[0m   [0mSELECT "login" FROM "users" WHERE ("users".login = 'quire') [0m
+  [4;36;1mSQL (0.000119)[0m   [0;1mSELECT "email" FROM "users" WHERE ("users".email = 'quire@example.com') [0m
+  [4;35;1mSQL (0.000319)[0m   [0mSELECT "invitation_id" FROM "users" WHERE ("users".invitation_id IS NULL) [0m
+  [4;36;1mUser Load (0.000427)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.000109)[0m   [0mSELECT "login" FROM "users" WHERE ("users".login = 'quentin2' AND "users".id <> 1) [0m
+  [4;36;1mSQL (0.000080)[0m   [0;1mSELECT "email" FROM "users" WHERE ("users".email = 'quentin@example.com' AND "users".id <> 1) [0m
+  [4;35;1mUser Load (0.000119)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'quentin2') LIMIT 1[0m
+  [4;36;1mUser Load (0.000428)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (0.000445)[0m   [0mUPDATE "users" SET "remember_token" = '38e62623e2bd89dc0988efa3000fe0b66be33d9c', "remember_token_expires_at" = '2008-11-23 18:57:47', "updated_at" = '2008-11-09 18:57:47' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.000473)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (0.000864)[0m   [0mUPDATE "users" SET "remember_token" = '3b93aeaae38fa0bb6b9d7d4e299ccdee8eded02f', "remember_token_expires_at" = '2008-11-16 18:57:47', "updated_at" = '2008-11-09 18:57:47' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.001493)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (0.005973)[0m   [0mUPDATE "users" SET "remember_token" = '6377f7ada6376e0a6a56301db3f323eaa2a127dc', "remember_token_expires_at" = '2008-11-16 18:57:47', "updated_at" = '2008-11-09 18:57:47' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.000315)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.000109)[0m   [0mSELECT "login" FROM "users" WHERE ("users".login = 'quire') [0m
+  [4;36;1mSQL (0.000077)[0m   [0;1mSELECT "email" FROM "users" WHERE ("users".email IS NULL) [0m
+  [4;35;1mSQL (0.000235)[0m   [0mSELECT "invitation_id" FROM "users" WHERE ("users".invitation_id IS NULL) [0m
+  [4;36;1mSQL (0.000150)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.000241)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.000107)[0m   [0;1mSELECT "login" FROM "users" WHERE ("users".login IS NULL) [0m
+  [4;35;1mSQL (0.000090)[0m   [0mSELECT "email" FROM "users" WHERE ("users".email = 'quire@example.com') [0m
+  [4;36;1mSQL (0.000235)[0m   [0;1mSELECT "invitation_id" FROM "users" WHERE ("users".invitation_id IS NULL) [0m
+  [4;35;1mSQL (0.000143)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.000187)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.000096)[0m   [0mSELECT "login" FROM "users" WHERE ("users".login = 'quire') [0m
+  [4;36;1mSQL (0.000075)[0m   [0;1mSELECT "email" FROM "users" WHERE ("users".email = 'quire@example.com') [0m
+  [4;35;1mSQL (0.000222)[0m   [0mSELECT "invitation_id" FROM "users" WHERE ("users".invitation_id IS NULL) [0m
+  [4;36;1mSQL (0.000139)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.000182)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.000092)[0m   [0;1mSELECT "login" FROM "users" WHERE ("users".login = 'quire') [0m
+  [4;35;1mSQL (0.000073)[0m   [0mSELECT "email" FROM "users" WHERE ("users".email = 'quire@example.com') [0m
+  [4;36;1mSQL (0.000219)[0m   [0;1mSELECT "invitation_id" FROM "users" WHERE ("users".invitation_id IS NULL) [0m
+  [4;35;1mSQL (0.000168)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mUser Load (0.000586)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSQL (0.000102)[0m   [0mSELECT "login" FROM "users" WHERE ("users".login = 'quentin' AND "users".id <> 1) [0m
+  [4;36;1mSQL (0.000080)[0m   [0;1mSELECT "email" FROM "users" WHERE ("users".email = 'quentin@example.com' AND "users".id <> 1) [0m
+  [4;35;1mUser Load (0.000339)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'quentin') LIMIT 1[0m
+  [4;36;1mUser Load (0.000381)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (0.000828)[0m   [0mUPDATE "users" SET "remember_token" = '98ecefb70ed740e8ca7c28a9103acff1b3a7e2a7', "remember_token_expires_at" = '2008-11-23 18:57:47', "updated_at" = '2008-11-09 18:57:47' WHERE "id" = 1[0m
+  [4;36;1mUser Load (0.000428)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (0.000294)[0m   [0mUPDATE "users" SET "remember_token" = '1bdbca8cc2139fdaf7f9aa1d7baabe761f369c0a', "remember_token_expires_at" = '2008-11-23 18:57:47', "updated_at" = '2008-11-09 18:57:47' WHERE "id" = 1[0m
+  [4;36;1mUser Update (0.000095)[0m   [0;1mUPDATE "users" SET "remember_token" = NULL, "remember_token_expires_at" = NULL, "updated_at" = '2008-11-09 18:57:47' WHERE "id" = 1[0m
+  [4;36;1mSQL (0.000365)[0m   [0;1mSELECT count(*) AS count_all FROM "children" [0m
+
+
+Processing ChildrenController#create (for 0.0.0.0 at 2008-11-09 12:57:49) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"children", "child"=>{}}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00090 (1112 reqs/sec) | DB: 0.00301 (335%) | 302 Found [http://test.host/children/create?]
+  [4;35;1mSQL (0.000241)[0m   [0mSELECT count(*) AS count_all FROM "children" [0m
+  [4;36;1mSQL (0.000204)[0m   [0;1mSELECT count(*) AS count_all FROM "children" [0m
+  [4;35;1mChild Load (0.000252)[0m   [0mSELECT * FROM "children" WHERE ("children"."id" = 953125641) [0m
+
+
+Processing ChildrenController#destroy (for 0.0.0.0 at 2008-11-09 12:57:49) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"953125641", "controller"=>"children"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00049 (2033 reqs/sec) | DB: 0.00070 (141%) | 302 Found [http://test.host/children/destroy/953125641]
+  [4;36;1mSQL (0.000166)[0m   [0;1mSELECT count(*) AS count_all FROM "children" [0m
+  [4;35;1mChild Load (0.000299)[0m   [0mSELECT * FROM "children" WHERE ("children"."id" = 953125641) [0m
+
+
+Processing ChildrenController#edit (for 0.0.0.0 at 2008-11-09 12:57:49) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"953125641", "controller"=>"children"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00058 (1730 reqs/sec) | DB: 0.00047 (80%) | 302 Found [http://test.host/children/edit/953125641]
+
+
+Processing ChildrenController#index (for 0.0.0.0 at 2008-11-09 12:57:49) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"children"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00052 (1927 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/children]
+
+
+Processing ChildrenController#new (for 0.0.0.0 at 2008-11-09 12:57:49) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"children"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00048 (2100 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/children/new]
+  [4;36;1mChild Load (0.000329)[0m   [0;1mSELECT * FROM "children" WHERE ("children"."id" = 953125641) [0m
+
+
+Processing ChildrenController#show (for 0.0.0.0 at 2008-11-09 12:57:49) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"953125641", "controller"=>"children"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00050 (1995 reqs/sec) | DB: 0.00033 (65%) | 302 Found [http://test.host/children/show/953125641]
+  [4;35;1mChild Load (0.000299)[0m   [0mSELECT * FROM "children" WHERE ("children"."id" = 953125641) [0m
+
+
+Processing ChildrenController#update (for 0.0.0.0 at 2008-11-09 12:57:49) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"953125641", "controller"=>"children", "child"=>{}}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00045 (2202 reqs/sec) | DB: 0.00030 (65%) | 302 Found [http://test.host/children/update/953125641?]
+  [4;36;1mSQL (0.000221)[0m   [0;1mSELECT count(*) AS count_all FROM "families" [0m
+
+
+Processing FamiliesController#create (for 0.0.0.0 at 2008-11-09 12:57:49) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"families", "family"=>{}}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00048 (2087 reqs/sec) | DB: 0.00022 (46%) | 302 Found [http://test.host/families?]
+  [4;35;1mSQL (0.000150)[0m   [0mSELECT count(*) AS count_all FROM "families" [0m
+  [4;36;1mSQL (0.000173)[0m   [0;1mSELECT count(*) AS count_all FROM "families" [0m
+  [4;35;1mFamily Load (0.000340)[0m   [0mSELECT * FROM "families" WHERE ("families"."id" = 953125641) [0m
+
+
+Processing FamiliesController#destroy (for 0.0.0.0 at 2008-11-09 12:57:49) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"953125641", "controller"=>"families"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00049 (2028 reqs/sec) | DB: 0.00066 (134%) | 302 Found [http://test.host/families/953125641]
+  [4;36;1mSQL (0.000145)[0m   [0;1mSELECT count(*) AS count_all FROM "families" [0m
+  [4;35;1mFamily Load (0.000382)[0m   [0mSELECT * FROM "families" WHERE ("families"."id" = 953125641) [0m
+
+
+Processing FamiliesController#edit (for 0.0.0.0 at 2008-11-09 12:57:49) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"953125641", "controller"=>"families"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00046 (2159 reqs/sec) | DB: 0.00053 (113%) | 302 Found [http://test.host/families/953125641/edit]
+
+
+Processing FamiliesController#index (for 0.0.0.0 at 2008-11-09 12:57:49) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"families"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00045 (2201 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/families]
+
+
+Processing FamiliesController#new (for 0.0.0.0 at 2008-11-09 12:57:49) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"families"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00057 (1763 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/families/new]
+  [4;36;1mFamily Load (0.000420)[0m   [0;1mSELECT * FROM "families" WHERE ("families"."id" = 953125641) [0m
+
+
+Processing FamiliesController#show (for 0.0.0.0 at 2008-11-09 12:57:49) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"953125641", "controller"=>"families"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00047 (2109 reqs/sec) | DB: 0.00042 (88%) | 302 Found [http://test.host/families/953125641]
+  [4;35;1mFamily Load (0.000421)[0m   [0mSELECT * FROM "families" WHERE ("families"."id" = 953125641) [0m
+
+
+Processing FamiliesController#update (for 0.0.0.0 at 2008-11-09 12:57:49) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"953125641", "controller"=>"families", "family"=>{}}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00054 (1844 reqs/sec) | DB: 0.00042 (77%) | 302 Found [http://test.host/families/953125641?]
+  [4;36;1mSQL (0.000253)[0m   [0;1mSELECT count(*) AS count_all FROM "invitations" [0m
+
+
+Processing InvitationsController#create (for 0.0.0.0 at 2008-11-09 12:57:49) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"invitations", "invitation"=>{}}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00051 (1945 reqs/sec) | DB: 0.00025 (49%) | 302 Found [http://test.host/invitations?]
+  [4;35;1mSQL (0.000158)[0m   [0mSELECT count(*) AS count_all FROM "invitations" [0m
+  [4;36;1mSQL (0.000174)[0m   [0;1mSELECT count(*) AS count_all FROM "invitations" [0m
+  [4;35;1mInvitation Load (0.000250)[0m   [0mSELECT * FROM "invitations" WHERE ("invitations"."id" = 953125641) [0m
+
+
+Processing InvitationsController#destroy (for 0.0.0.0 at 2008-11-09 12:57:49) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"953125641", "controller"=>"invitations"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00050 (2016 reqs/sec) | DB: 0.00058 (117%) | 302 Found [http://test.host/invitations/953125641]
+  [4;36;1mSQL (0.000170)[0m   [0;1mSELECT count(*) AS count_all FROM "invitations" [0m
+  [4;35;1mInvitation Load (0.000291)[0m   [0mSELECT * FROM "invitations" WHERE ("invitations"."id" = 953125641) [0m
+
+
+Processing InvitationsController#edit (for 0.0.0.0 at 2008-11-09 12:57:49) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"953125641", "controller"=>"invitations"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00049 (2036 reqs/sec) | DB: 0.00046 (93%) | 302 Found [http://test.host/invitations/953125641/edit]
+
+
+Processing InvitationsController#index (for 0.0.0.0 at 2008-11-09 12:57:49) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"invitations"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00047 (2108 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/invitations]
+
+
+Processing InvitationsController#new (for 0.0.0.0 at 2008-11-09 12:57:49) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"invitations"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00060 (1655 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/invitations/new]
+  [4;36;1mInvitation Load (0.000320)[0m   [0;1mSELECT * FROM "invitations" WHERE ("invitations"."id" = 953125641) [0m
+
+
+Processing InvitationsController#show (for 0.0.0.0 at 2008-11-09 12:57:49) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"953125641", "controller"=>"invitations"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00063 (1575 reqs/sec) | DB: 0.00032 (50%) | 302 Found [http://test.host/invitations/953125641]
+  [4;35;1mInvitation Load (0.000305)[0m   [0mSELECT * FROM "invitations" WHERE ("invitations"."id" = 953125641) [0m
+
+
+Processing InvitationsController#update (for 0.0.0.0 at 2008-11-09 12:57:49) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"953125641", "controller"=>"invitations", "invitation"=>{}}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00046 (2178 reqs/sec) | DB: 0.00030 (66%) | 302 Found [http://test.host/invitations/953125641?]
+  [4;36;1mUser Load (0.000435)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing SessionsController#destroy (for 0.0.0.0 at 2008-11-09 12:57:49) [GET]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://test.host/
+Completed in 0.00241 (415 reqs/sec) | DB: 0.00043 (18%) | 302 Found [http://test.host/logout]
+  [4;35;1mUser Load (0.000395)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Update (0.000372)[0m   [0;1mUPDATE "users" SET "remember_token" = '4c4582c7f08fb97c6f17a7325527c13a067eb49d', "remember_token_expires_at" = '2008-11-23 18:57:49', "updated_at" = '2008-11-09 18:57:49' WHERE "id" = 1[0m
+
+
+Processing SessionsController#new (for 0.0.0.0 at 2008-11-09 12:57:50) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/sessions
+Rendering sessions/new
+Completed in 0.00393 (254 reqs/sec) | Rendering: 0.00382 (97%) | DB: 0.00077 (19%) | 200 OK [http://test.host/login]
+  [4;35;1mUser Load (0.000171)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'invalid_auth_token') LIMIT 1[0m
+  [4;36;1mUser Load (0.000404)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Update (0.000385)[0m   [0mUPDATE "users" SET "remember_token" = '593d6bdc0a2467c514d89a4afc2b423fe7c34e86', "remember_token_expires_at" = '2008-11-23 18:57:50', "updated_at" = '2008-11-09 18:57:50' WHERE "id" = 1[0m
+  [4;36;1mUser Update (0.000115)[0m   [0;1mUPDATE "users" SET "remember_token_expires_at" = '2008-11-09 18:52:50', "updated_at" = '2008-11-09 18:57:50' WHERE "id" = 1[0m
+
+
+Processing SessionsController#new (for 0.0.0.0 at 2008-11-09 12:57:50) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/sessions
+Rendering sessions/new
+Completed in 0.00148 (675 reqs/sec) | Rendering: 0.00138 (92%) | DB: 0.00108 (72%) | 200 OK [http://test.host/login]
+  [4;35;1mUser Load (0.000409)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = '593d6bdc0a2467c514d89a4afc2b423fe7c34e86') LIMIT 1[0m
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2008-11-09 12:57:50) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"sessions", "password"=>"bad password", "login"=>"quentin"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Load (0.000739)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'quentin') LIMIT 1[0m
+Failed login for 'quentin' from 0.0.0.0 at Sun Nov 09 18:57:50 UTC 2008
+Rendering template within layouts/sessions
+Rendering sessions/new
+Completed in 0.00475 (210 reqs/sec) | Rendering: 0.00197 (41%) | DB: 0.00115 (24%) | 200 OK [http://test.host/session?login=quentin&password=bad+password]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2008-11-09 12:57:50) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"sessions", "password"=>"monkey", "login"=>"quentin"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;35;1mUser Load (0.000593)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'quentin') LIMIT 1[0m
+  [4;36;1mUser Update (0.000407)[0m   [0;1mUPDATE "users" SET "remember_token" = NULL, "remember_token_expires_at" = NULL, "updated_at" = '2008-11-09 18:57:50' WHERE "id" = 1[0m
+Cookie set: auth_token=; path=/
+Redirected to http://test.host/
+Completed in 0.00416 (240 reqs/sec) | DB: 0.00100 (24%) | 302 Found [http://test.host/session?login=quentin&password=monkey]
+  [4;35;1mUser Load (0.000616)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Update (0.000392)[0m   [0;1mUPDATE "users" SET "remember_token" = 'c82dea90fea88429680edc86bb050b5d1ae35cc7', "remember_token_expires_at" = '2008-11-23 18:57:50', "updated_at" = '2008-11-09 18:57:50' WHERE "id" = 1[0m
+
+
+Processing SessionsController#new (for 0.0.0.0 at 2008-11-09 12:57:50) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/sessions
+Rendering sessions/new
+Completed in 0.00195 (512 reqs/sec) | Rendering: 0.00185 (94%) | DB: 0.00101 (51%) | 200 OK [http://test.host/login]
+  [4;35;1mUser Load (0.000659)[0m   [0mSELECT * FROM "users" WHERE ("users"."remember_token" = 'c82dea90fea88429680edc86bb050b5d1ae35cc7') LIMIT 1[0m
+  [4;36;1mUser Update (0.000158)[0m   [0;1mUPDATE "users" SET "remember_token" = 'af7b9eb0f350f8d77b27307d15106fa47eb403d1', "updated_at" = '2008-11-09 18:57:50' WHERE "id" = 1[0m
+Cookie set: auth_token=af7b9eb0f350f8d77b27307d15106fa47eb403d1; path=/; expires=Sun, 23 Nov 2008 18:57:50 GMT
+  [4;35;1mUser Load (0.000409)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+Processing SessionsController#destroy (for 0.0.0.0 at 2008-11-09 12:57:50) [GET]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://test.host/
+Completed in 0.00028 (3521 reqs/sec) | DB: 0.00123 (431%) | 302 Found [http://test.host/logout]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2008-11-09 12:57:50) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"sessions", "password"=>"monkey", "login"=>"quentin", "remember_me"=>"0"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Load (0.000450)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'quentin') LIMIT 1[0m
+  [4;35;1mUser Update (0.000289)[0m   [0mUPDATE "users" SET "remember_token" = NULL, "remember_token_expires_at" = NULL, "updated_at" = '2008-11-09 18:57:50' WHERE "id" = 1[0m
+Cookie set: auth_token=; path=/
+Redirected to http://test.host/
+Completed in 0.00301 (332 reqs/sec) | DB: 0.00074 (24%) | 302 Found [http://test.host/session?login=quentin&password=monkey&remember_me=0]
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2008-11-09 12:57:50) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"sessions", "password"=>"monkey", "login"=>"quentin", "remember_me"=>"1"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mUser Load (0.000569)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'quentin') LIMIT 1[0m
+  [4;35;1mUser Update (0.000473)[0m   [0mUPDATE "users" SET "remember_token" = 'b6b03efad7cdccc02e78f2c460af8e152a9aa8c1', "remember_token_expires_at" = '2008-11-23 18:57:50', "updated_at" = '2008-11-09 18:57:50' WHERE "id" = 1[0m
+Cookie set: auth_token=b6b03efad7cdccc02e78f2c460af8e152a9aa8c1; path=/; expires=Sun, 23 Nov 2008 18:57:50 GMT
+Redirected to http://test.host/
+Completed in 0.09427 (10 reqs/sec) | DB: 0.00104 (1%) | 302 Found [http://test.host/session?login=quentin&password=monkey&remember_me=1]
+  [4;36;1mSQL (0.000367)[0m   [0;1mSELECT count(*) AS count_all FROM "settings" [0m
+
+
+Processing SettingsController#create (for 0.0.0.0 at 2008-11-09 12:57:50) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "setting"=>{}, "controller"=>"settings"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00082 (1225 reqs/sec) | DB: 0.00037 (44%) | 302 Found [http://test.host/settings?]
+  [4;35;1mSQL (0.000260)[0m   [0mSELECT count(*) AS count_all FROM "settings" [0m
+  [4;36;1mSQL (0.000272)[0m   [0;1mSELECT count(*) AS count_all FROM "settings" [0m
+  [4;35;1mSetting Load (0.000311)[0m   [0mSELECT * FROM "settings" WHERE ("settings"."id" = 953125641) [0m
+
+
+Processing SettingsController#destroy (for 0.0.0.0 at 2008-11-09 12:57:50) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"953125641", "controller"=>"settings"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00061 (1642 reqs/sec) | DB: 0.00084 (138%) | 302 Found [http://test.host/settings/953125641]
+  [4;36;1mSQL (0.000273)[0m   [0;1mSELECT count(*) AS count_all FROM "settings" [0m
+  [4;35;1mSetting Load (0.000311)[0m   [0mSELECT * FROM "settings" WHERE ("settings"."id" = 953125641) [0m
+
+
+Processing SettingsController#edit (for 0.0.0.0 at 2008-11-09 12:57:50) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"953125641", "controller"=>"settings"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00060 (1661 reqs/sec) | DB: 0.00058 (97%) | 302 Found [http://test.host/settings/953125641/edit]
+
+
+Processing SettingsController#index (for 0.0.0.0 at 2008-11-09 12:57:50) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"settings"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00055 (1805 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/settings]
+
+
+Processing SettingsController#new (for 0.0.0.0 at 2008-11-09 12:57:50) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"settings"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00051 (1941 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://test.host/settings/new]
+  [4;36;1mSetting Load (0.000300)[0m   [0;1mSELECT * FROM "settings" WHERE ("settings"."id" = 953125641) [0m
+
+
+Processing SettingsController#show (for 0.0.0.0 at 2008-11-09 12:57:50) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"953125641", "controller"=>"settings"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00057 (1744 reqs/sec) | DB: 0.00030 (52%) | 302 Found [http://test.host/settings/953125641]
+  [4;35;1mSetting Load (0.000336)[0m   [0mSELECT * FROM "settings" WHERE ("settings"."id" = 953125641) [0m
+
+
+Processing SettingsController#update (for 0.0.0.0 at 2008-11-09 12:57:50) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "setting"=>{}, "id"=>"953125641", "controller"=>"settings"}
+Redirected to http://test.host/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0.00056 (1792 reqs/sec) | DB: 0.00034 (60%) | 302 Found [http://test.host/settings/953125641?]
+  [4;36;1mSQL (0.000211)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2008-11-09 12:57:50) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"password_confirmation"=>"quire69", "password"=>"quire69", "login"=>"quire", "email"=>"quire@example.com"}, "action"=>"create", "controller"=>"users"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;35;1mSQL (0.000151)[0m   [0mSELECT "login" FROM "users" WHERE ("users".login = 'quire') [0m
+  [4;36;1mSQL (0.000087)[0m   [0;1mSELECT "email" FROM "users" WHERE ("users".email = 'quire@example.com') [0m
+  [4;35;1mSQL (0.000271)[0m   [0mSELECT "invitation_id" FROM "users" WHERE ("users".invitation_id IS NULL) [0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered layouts/_header (0.00126)
+Completed in 0.01385 (72 reqs/sec) | Rendering: 0.00885 (63%) | DB: 0.00072 (5%) | 200 OK [http://test.host/register?user%5Bemail%5D=quire%40example.com&user%5Blogin%5D=quire&user%5Bpassword%5D=quire69&user%5Bpassword_confirmation%5D=quire69]
+  [4;36;1mSQL (0.000216)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2008-11-09 12:57:50) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"password_confirmation"=>"quire69", "password"=>"quire69", "login"=>"quire", "email"=>nil}, "action"=>"create", "controller"=>"users"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;35;1mSQL (0.000120)[0m   [0mSELECT "login" FROM "users" WHERE ("users".login = 'quire') [0m
+  [4;36;1mSQL (0.000072)[0m   [0;1mSELECT "email" FROM "users" WHERE ("users".email IS NULL) [0m
+  [4;35;1mSQL (0.000227)[0m   [0mSELECT "invitation_id" FROM "users" WHERE ("users".invitation_id IS NULL) [0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered layouts/_header (0.00051)
+Completed in 0.00561 (178 reqs/sec) | Rendering: 0.00317 (56%) | DB: 0.00063 (11%) | 200 OK [http://test.host/register?user%5Bemail%5D=&user%5Blogin%5D=quire&user%5Bpassword%5D=quire69&user%5Bpassword_confirmation%5D=quire69]
+  [4;36;1mSQL (0.000174)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.000190)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2008-11-09 12:57:50) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"password_confirmation"=>"quire69", "password"=>"quire69", "login"=>nil, "email"=>"quire@example.com"}, "action"=>"create", "controller"=>"users"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mSQL (0.000109)[0m   [0;1mSELECT "login" FROM "users" WHERE ("users".login IS NULL) [0m
+  [4;35;1mSQL (0.000075)[0m   [0mSELECT "email" FROM "users" WHERE ("users".email = 'quire@example.com') [0m
+  [4;36;1mSQL (0.000247)[0m   [0;1mSELECT "invitation_id" FROM "users" WHERE ("users".invitation_id IS NULL) [0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered layouts/_header (0.00057)
+Completed in 0.00571 (175 reqs/sec) | Rendering: 0.00334 (58%) | DB: 0.00080 (13%) | 200 OK [http://test.host/register?user%5Bemail%5D=quire%40example.com&user%5Blogin%5D=&user%5Bpassword%5D=quire69&user%5Bpassword_confirmation%5D=quire69]
+  [4;35;1mSQL (0.000199)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.000190)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2008-11-09 12:57:50) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"password_confirmation"=>nil, "password"=>"quire69", "login"=>"quire", "email"=>"quire@example.com"}, "action"=>"create", "controller"=>"users"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;35;1mSQL (0.000106)[0m   [0mSELECT "login" FROM "users" WHERE ("users".login = 'quire') [0m
+  [4;36;1mSQL (0.000074)[0m   [0;1mSELECT "email" FROM "users" WHERE ("users".email = 'quire@example.com') [0m
+  [4;35;1mSQL (0.000223)[0m   [0mSELECT "invitation_id" FROM "users" WHERE ("users".invitation_id IS NULL) [0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered layouts/_header (0.00053)
+Completed in 0.00545 (183 reqs/sec) | Rendering: 0.00315 (57%) | DB: 0.00079 (14%) | 200 OK [http://test.host/register?user%5Bemail%5D=quire%40example.com&user%5Blogin%5D=quire&user%5Bpassword%5D=quire69&user%5Bpassword_confirmation%5D=]
+  [4;36;1mSQL (0.000183)[0m   [0;1mSELECT count(*) AS count_all FROM "users" [0m
+  [4;35;1mSQL (0.000204)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+
+
+Processing UsersController#create (for 0.0.0.0 at 2008-11-09 12:57:50) [POST]
+  Session ID: 
+  Parameters: {"user"=>{"password_confirmation"=>"quire69", "password"=>nil, "login"=>"quire", "email"=>"quire@example.com"}, "action"=>"create", "controller"=>"users"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+  [4;36;1mSQL (0.000104)[0m   [0;1mSELECT "login" FROM "users" WHERE ("users".login = 'quire') [0m
+  [4;35;1mSQL (0.000074)[0m   [0mSELECT "email" FROM "users" WHERE ("users".email = 'quire@example.com') [0m
+  [4;36;1mSQL (0.000238)[0m   [0;1mSELECT "invitation_id" FROM "users" WHERE ("users".invitation_id IS NULL) [0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered layouts/_header (0.00050)
+Completed in 0.00612 (163 reqs/sec) | Rendering: 0.00303 (49%) | DB: 0.00080 (13%) | 200 OK [http://test.host/register?user%5Bemail%5D=quire%40example.com&user%5Blogin%5D=quire&user%5Bpassword%5D=&user%5Bpassword_confirmation%5D=quire69]
+  [4;35;1mSQL (0.000190)[0m   [0mSELECT count(*) AS count_all FROM "users" [0m
+  [4;36;1mSQL (0.000499)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000474)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000454)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000462)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000445)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000445)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000441)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000443)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000442)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000475)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000460)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000473)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000448)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
