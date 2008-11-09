@@ -1,5 +1,6 @@
 <p>
 	Name: <%= @user.name %><br/>
 	Email: <%= @user.email %><br/>
+	You've entered <%= @user.families.size %> families. <br/>
 </p>
 <%= link_to "Edit...", :action => "edit", :id => @user %>

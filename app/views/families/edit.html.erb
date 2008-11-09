@@ -33,11 +33,11 @@
   </p>
   <p>
     <%= f.label :foodonly %><br />
-    <%= f.text_field :foodonly %>
+	<%= select (:family, :pickup, {"No" => 0, "Yes" => 1}) %>
   </p>
   <p>
-    <%= f.label :box %><br />
-    <%= f.text_field :box %>
+	<%= f.label :pickup %><br />
+	<%= select (:family, :pickup, {"Pickup" => 0, "Delivery" => 1}) %>
   </p>
   <p>
     <%= f.submit "Update" %>

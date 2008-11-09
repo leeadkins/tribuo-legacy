@@ -23,20 +23,26 @@
 	</p>
 	<% end %>
 
+	<p>
+		Some of the items on this page can be edited in place. These will highlight yellow whenever you hover over them.  Items that aren't editable here can be changed by clicking the Edit This Family link at the bottom, or the View and Edit Children link.
+	</p>
 <% end %>
 <p>
 <%= editable_content_tag(:span, @family, 'firstname', true, nil,{:class => "show_family_name"},{:okText => 'Save'}) %>
 <%= editable_content_tag(:span, @family, 'lastname', true, nil,{:class => "show_family_name"},{:okText => 'Save'}) %>
 </p>
-<p>
+<p>Phone:<br/> 
 <%= editable_content_tag(:span, @family, 'phone', true, nil,{:class => "show_family_info"},{:okText => 'Save'}) %>
 <br/>
+Address: <br/>
 <%= editable_content_tag(:span, @family, 'address', true, nil,{:class => "show_family_info"},{:okText => 'Save'}) %>
 <br/>
+Directions: <br/>
 <%= editable_content_tag(:span, @family, 'directions', true, nil,{:class => "show_family_info"},{:okText => 'Save'}) %>
 <br/>
 <span>Size: </span>
 <%= editable_content_tag(:span, @family, 'familysize', true, nil,{:class => "show_family_info"},{:okText => 'Save'}) %>
+<br/>
 <span>Children: </span>
 <%= editable_content_tag(:span, @family, 'childrensize', true, nil,{:class => "show_family_info"},{:okText => 'Save'}) %>
 <br/>
@@ -77,6 +83,6 @@
 <%= render :partial => @child = Child.new, 
    :locals => { :button_name => 'Create'}%>
 
-<%= link_to 'View and Children', family_children_path(@family) %>
+<%= link_to 'View and Edit Children', family_children_path(@family) %> |
 <%= link_to 'Edit this Family', edit_family_path(@family) %> |
 <%= link_to 'Back to List', families_path %>

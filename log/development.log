@@ -3699,3 +3699,498 @@ Rendering families/show
 Rendered children/_child (0.00242)
 Rendered layouts/_header (0.00110)
 Completed in 0.04708 (21 reqs/sec) | Rendering: 0.01664 (35%) | DB: 0.00163 (3%) | 200 OK [http://0.0.0.0/families/2]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2008-11-09 17:14:32) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiJUZhbWlseSB3
+YXMgc3VjY2Vzc2Z1bGx5IGNyZWF0ZWQuBjoKQHVzZWR7BjsJVA==--1cfe1554bc544f40ad1bd9c8e447c1f6f5a22e56
+  Parameters: {"action"=>"index", "controller"=>"activities"}
+Rendering template within layouts/application
+Rendering activities/index
+  [4;36;1mUser Load (0.000512)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.02858)
+Completed in 0.03754 (26 reqs/sec) | Rendering: 0.03395 (90%) | DB: 0.00051 (1%) | 200 OK [http://0.0.0.0/activities]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2008-11-09 17:14:34) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"activities"}
+Rendering template within layouts/application
+Rendering activities/index
+  [4;35;1mUser Load (0.000428)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.01647)
+Completed in 0.02060 (48 reqs/sec) | Rendering: 0.01774 (86%) | DB: 0.00043 (2%) | 200 OK [http://0.0.0.0/activities]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-09 17:14:35) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;36;1mUser Load (0.000393)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mFamily Load (0.000468)[0m   [0mSELECT * FROM "families" [0m
+Rendering template within layouts/application
+Rendering families/index
+Rendered layouts/_header (0.00259)
+Completed in 0.03079 (32 reqs/sec) | Rendering: 0.01097 (35%) | DB: 0.00086 (2%) | 200 OK [http://0.0.0.0/families]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-11-09 17:14:37) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Load (0.000500)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.000456)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mSQL (0.000279)[0m   [0;1mSELECT count(*) AS count_all FROM "families" WHERE ("families".user_id = 1) [0m
+Rendered layouts/_header (0.00073)
+Completed in 0.03049 (32 reqs/sec) | Rendering: 0.01335 (43%) | DB: 0.00124 (4%) | 200 OK [http://0.0.0.0/users/1]
+
+
+Processing SettingsController#index (for 127.0.0.1 at 2008-11-09 17:14:42) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"settings"}
+  [4;35;1mUser Load (0.000381)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSetting Load (0.000418)[0m   [0;1mSELECT * FROM "settings" [0m
+Rendering template within layouts/application
+Rendering settings/index
+Rendered layouts/_header (0.00284)
+Completed in 0.02662 (37 reqs/sec) | Rendering: 0.00870 (32%) | DB: 0.00080 (3%) | 200 OK [http://0.0.0.0/settings]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-09 17:14:49) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;35;1mUser Load (0.000387)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.000469)[0m   [0;1mSELECT * FROM "families" [0m
+Rendering template within layouts/application
+Rendering families/index
+Rendered layouts/_header (0.00287)
+Completed in 0.02968 (33 reqs/sec) | Rendering: 0.00950 (32%) | DB: 0.00086 (2%) | 200 OK [http://0.0.0.0/families]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-09 17:17:03) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;35;1mUser Load (0.000443)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.000516)[0m   [0;1mSELECT * FROM "families" [0m
+Rendering template within layouts/application
+Rendering families/index
+Rendered layouts/_header (0.00290)
+Completed in 0.03223 (31 reqs/sec) | Rendering: 0.01164 (36%) | DB: 0.00096 (2%) | 200 OK [http://0.0.0.0/families]
+
+
+Processing FamiliesController#show (for 127.0.0.1 at 2008-11-09 17:17:16) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"families"}
+  [4;35;1mUser Load (0.000418)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.000491)[0m   [0;1mSELECT * FROM "families" WHERE ("families"."id" = 2) [0m
+  [4;35;1mChild Load (0.000180)[0m   [0mSELECT "children".* FROM "children" WHERE ("children".family_id IN (2)) [0m
+Rendering template within layouts/application
+Rendering families/show
+  [4;36;1mUser Load (0.000410)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered children/_child (0.00239)
+Rendered layouts/_header (0.00067)
+Completed in 0.04388 (22 reqs/sec) | Rendering: 0.01491 (33%) | DB: 0.00150 (3%) | 200 OK [http://0.0.0.0/families/2]
+
+
+Processing FamiliesController#show (for 127.0.0.1 at 2008-11-09 17:18:48) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"families"}
+  [4;35;1mUser Load (0.000491)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.001306)[0m   [0;1mSELECT * FROM "families" WHERE ("families"."id" = 2) [0m
+  [4;35;1mChild Load (0.000205)[0m   [0mSELECT "children".* FROM "children" WHERE ("children".family_id IN (2)) [0m
+Rendering template within layouts/application
+Rendering families/show
+  [4;36;1mUser Load (0.000415)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered children/_child (0.00254)
+Rendered layouts/_header (0.00073)
+Completed in 0.04531 (22 reqs/sec) | Rendering: 0.01431 (31%) | DB: 0.00242 (5%) | 200 OK [http://0.0.0.0/families/2]
+
+
+Processing FamiliesController#edit (for 127.0.0.1 at 2008-11-09 17:20:26) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"edit", "id"=>"2", "controller"=>"families"}
+  [4;35;1mUser Load (0.000393)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.000436)[0m   [0;1mSELECT * FROM "families" WHERE ("families"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering families/edit
+Rendered layouts/_header (0.00263)
+Completed in 0.03214 (31 reqs/sec) | Rendering: 0.01073 (33%) | DB: 0.00083 (2%) | 200 OK [http://0.0.0.0/families/2/edit]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-09 17:20:32) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;35;1mUser Load (0.000426)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.000549)[0m   [0;1mSELECT * FROM "families" [0m
+Rendering template within layouts/application
+Rendering families/index
+Rendered layouts/_header (0.00279)
+Completed in 0.03202 (31 reqs/sec) | Rendering: 0.00969 (30%) | DB: 0.00097 (3%) | 200 OK [http://0.0.0.0/families]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-09 17:21:19) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;35;1mUser Load (0.000483)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.000540)[0m   [0;1mSELECT * FROM "families" [0m
+Rendering template within layouts/application
+Rendering families/index
+Rendered layouts/_header (0.00328)
+Completed in 0.10819 (9 reqs/sec) | Rendering: 0.00963 (8%) | DB: 0.00102 (0%) | 200 OK [http://0.0.0.0/families]
+
+
+Processing FamiliesController#new (for 127.0.0.1 at 2008-11-09 17:21:22) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"new", "controller"=>"families"}
+  [4;35;1mUser Load (0.000470)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering families/new
+Rendered families/_child (0.00078)
+Rendered layouts/_header (0.00306)
+Completed in 0.05093 (19 reqs/sec) | Rendering: 0.02035 (39%) | DB: 0.00047 (0%) | 200 OK [http://0.0.0.0/families/new]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-09 17:21:29) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"main"}
+  [4;36;1mUser Load (0.000424)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering main/index
+Rendered layouts/_header (0.00266)
+Completed in 0.01961 (51 reqs/sec) | Rendering: 0.00479 (24%) | DB: 0.00042 (2%) | 200 OK [http://0.0.0.0/]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-09 17:21:30) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;35;1mUser Load (0.000408)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.000625)[0m   [0;1mSELECT * FROM "families" [0m
+Rendering template within layouts/application
+Rendering families/index
+Rendered layouts/_header (0.00269)
+Completed in 0.02900 (34 reqs/sec) | Rendering: 0.00906 (31%) | DB: 0.00103 (3%) | 200 OK [http://0.0.0.0/families]
+
+
+Processing FamiliesController#new (for 127.0.0.1 at 2008-11-09 17:21:32) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"new", "controller"=>"families"}
+  [4;35;1mUser Load (0.000470)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering families/new
+Rendered families/_child (0.00078)
+Rendered layouts/_header (0.00282)
+Completed in 0.05538 (18 reqs/sec) | Rendering: 0.01216 (21%) | DB: 0.00047 (0%) | 200 OK [http://0.0.0.0/families/new]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-09 17:21:54) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;36;1mUser Load (0.000381)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mFamily Load (0.000511)[0m   [0mSELECT * FROM "families" [0m
+Rendering template within layouts/application
+Rendering families/index
+Rendered layouts/_header (0.00272)
+Completed in 0.10765 (9 reqs/sec) | Rendering: 0.00982 (9%) | DB: 0.00089 (0%) | 200 OK [http://0.0.0.0/families]
+
+
+Processing FamiliesController#show (for 127.0.0.1 at 2008-11-09 17:22:00) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"families"}
+  [4;36;1mUser Load (0.000382)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mFamily Load (0.000471)[0m   [0mSELECT * FROM "families" WHERE ("families"."id" = 2) [0m
+  [4;36;1mChild Load (0.000170)[0m   [0;1mSELECT "children".* FROM "children" WHERE ("children".family_id IN (2)) [0m
+Rendering template within layouts/application
+Rendering families/show
+  [4;35;1mUser Load (0.000432)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered children/_child (0.00232)
+Rendered layouts/_header (0.00069)
+Completed in 0.04086 (24 reqs/sec) | Rendering: 0.01347 (32%) | DB: 0.00145 (3%) | 200 OK [http://0.0.0.0/families/2]
+
+
+Processing FamiliesController#show (for 127.0.0.1 at 2008-11-09 17:24:14) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"families"}
+  [4;36;1mUser Load (0.000390)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mFamily Load (0.000424)[0m   [0mSELECT * FROM "families" WHERE ("families"."id" = 2) [0m
+  [4;36;1mChild Load (0.000169)[0m   [0;1mSELECT "children".* FROM "children" WHERE ("children".family_id IN (2)) [0m
+Rendering template within layouts/application
+Rendering families/show
+  [4;35;1mUser Load (0.000406)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered children/_child (0.00222)
+Rendered layouts/_header (0.00070)
+Completed in 0.04093 (24 reqs/sec) | Rendering: 0.01342 (32%) | DB: 0.00139 (3%) | 200 OK [http://0.0.0.0/families/2]
+
+
+Processing ChildrenController#index (for 127.0.0.1 at 2008-11-09 17:24:25) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"family_id"=>"2", "action"=>"index", "controller"=>"children"}
+  [4;36;1mUser Load (0.000675)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mFamily Load (0.000657)[0m   [0mSELECT * FROM "families" WHERE ("families"."id" = 2) [0m
+  [4;36;1mChild Load (0.000214)[0m   [0;1mSELECT * FROM "children" WHERE ("children".family_id = 2) [0m
+Rendering template within layouts/application
+Rendering children/index
+Rendered layouts/_header (0.00305)
+Completed in 0.04468 (22 reqs/sec) | Rendering: 0.00608 (13%) | DB: 0.00155 (3%) | 200 OK [http://0.0.0.0/families/2/children]
+
+
+Processing FamiliesController#show (for 127.0.0.1 at 2008-11-09 17:24:42) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"families"}
+  [4;35;1mUser Load (0.000435)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.000517)[0m   [0;1mSELECT * FROM "families" WHERE ("families"."id" = 2) [0m
+  [4;35;1mChild Load (0.000222)[0m   [0mSELECT "children".* FROM "children" WHERE ("children".family_id IN (2)) [0m
+Rendering template within layouts/application
+Rendering families/show
+  [4;36;1mUser Load (0.000453)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered children/_child (0.00258)
+Rendered layouts/_header (0.00074)
+Completed in 0.04524 (22 reqs/sec) | Rendering: 0.01492 (32%) | DB: 0.00163 (3%) | 200 OK [http://0.0.0.0/families/2]
+
+
+Processing FamiliesController#show (for 127.0.0.1 at 2008-11-09 17:24:57) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"families"}
+  [4;35;1mUser Load (0.000433)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.000486)[0m   [0;1mSELECT * FROM "families" WHERE ("families"."id" = 2) [0m
+  [4;35;1mChild Load (0.000183)[0m   [0mSELECT "children".* FROM "children" WHERE ("children".family_id IN (2)) [0m
+Rendering template within layouts/application
+Rendering families/show
+  [4;36;1mUser Load (0.000481)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered children/_child (0.00312)
+Rendered layouts/_header (0.00072)
+Completed in 0.04484 (22 reqs/sec) | Rendering: 0.01530 (34%) | DB: 0.00158 (3%) | 200 OK [http://0.0.0.0/families/2]
+
+
+Processing FamiliesController#show (for 127.0.0.1 at 2008-11-09 17:27:05) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"families"}
+  [4;35;1mUser Load (0.000426)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.000435)[0m   [0;1mSELECT * FROM "families" WHERE ("families"."id" = 2) [0m
+  [4;35;1mChild Load (0.000174)[0m   [0mSELECT "children".* FROM "children" WHERE ("children".family_id IN (2)) [0m
+Rendering template within layouts/application
+Rendering families/show
+  [4;36;1mUser Load (0.000512)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered children/_child (0.00245)
+Rendered layouts/_header (0.00070)
+Completed in 0.11376 (8 reqs/sec) | Rendering: 0.08583 (75%) | DB: 0.00155 (1%) | 200 OK [http://0.0.0.0/families/2]
+
+
+Processing FamiliesController#show (for 127.0.0.1 at 2008-11-09 17:39:05) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"families"}
+  [4;35;1mUser Load (0.000377)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.000415)[0m   [0;1mSELECT * FROM "families" WHERE ("families"."id" = 2) [0m
+  [4;35;1mChild Load (0.000170)[0m   [0mSELECT "children".* FROM "children" WHERE ("children".family_id IN (2)) [0m
+Rendering template within layouts/application
+Rendering families/show
+  [4;36;1mUser Load (0.000439)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered children/_child (0.00224)
+Rendered layouts/_header (0.00065)
+Completed in 0.04085 (24 reqs/sec) | Rendering: 0.01357 (33%) | DB: 0.00140 (3%) | 200 OK [http://0.0.0.0/families/2]
+
+
+Processing FamiliesController#show (for 127.0.0.1 at 2008-11-09 17:39:22) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"families"}
+  [4;35;1mUser Load (0.000454)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.000479)[0m   [0;1mSELECT * FROM "families" WHERE ("families"."id" = 2) [0m
+  [4;35;1mChild Load (0.000233)[0m   [0mSELECT "children".* FROM "children" WHERE ("children".family_id IN (2)) [0m
+Rendering template within layouts/application
+Rendering families/show
+  [4;36;1mUser Load (0.000468)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered children/_child (0.00254)
+Rendered layouts/_header (0.00074)
+Completed in 0.12130 (8 reqs/sec) | Rendering: 0.01139 (9%) | DB: 0.00163 (1%) | 200 OK [http://0.0.0.0/families/2]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-09 17:39:27) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;35;1mUser Load (0.000457)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.000477)[0m   [0;1mSELECT * FROM "families" [0m
+Rendering template within layouts/application
+Rendering families/index
+Rendered layouts/_header (0.00257)
+Completed in 0.02923 (34 reqs/sec) | Rendering: 0.00875 (29%) | DB: 0.00093 (3%) | 200 OK [http://0.0.0.0/families]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-09 17:40:34) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;35;1mUser Load (0.000393)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.000569)[0m   [0;1mSELECT * FROM "families" [0m
+Rendering template within layouts/application
+Rendering families/index
+Rendered layouts/_header (0.00290)
+Completed in 0.10689 (9 reqs/sec) | Rendering: 0.01222 (11%) | DB: 0.00096 (0%) | 200 OK [http://0.0.0.0/families]
+
+
+Processing FamiliesController#edit (for 127.0.0.1 at 2008-11-09 17:41:08) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"edit", "id"=>"2", "controller"=>"families"}
+  [4;35;1mUser Load (0.000459)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.000478)[0m   [0;1mSELECT * FROM "families" WHERE ("families"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering families/edit
+Rendered layouts/_header (0.00270)
+Completed in 0.03072 (32 reqs/sec) | Rendering: 0.00902 (29%) | DB: 0.00094 (3%) | 200 OK [http://0.0.0.0/families/2/edit]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-09 17:41:12) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;35;1mUser Load (0.000431)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.000525)[0m   [0;1mSELECT * FROM "families" [0m
+Rendering template within layouts/application
+Rendering families/index
+Rendered layouts/_header (0.00301)
+Completed in 0.11353 (8 reqs/sec) | Rendering: 0.09312 (82%) | DB: 0.00096 (0%) | 200 OK [http://0.0.0.0/families]
+
+
+Processing FamiliesController#show (for 127.0.0.1 at 2008-11-09 17:41:14) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"families"}
+  [4;35;1mUser Load (0.000391)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.000445)[0m   [0;1mSELECT * FROM "families" WHERE ("families"."id" = 2) [0m
+  [4;35;1mChild Load (0.000167)[0m   [0mSELECT "children".* FROM "children" WHERE ("children".family_id IN (2)) [0m
+Rendering template within layouts/application
+Rendering families/show
+  [4;36;1mUser Load (0.000395)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered children/_child (0.00230)
+Rendered layouts/_header (0.00068)
+Completed in 0.03804 (26 reqs/sec) | Rendering: 0.01024 (26%) | DB: 0.00140 (3%) | 200 OK [http://0.0.0.0/families/2]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-09 17:41:17) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;35;1mUser Load (0.000451)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.000503)[0m   [0;1mSELECT * FROM "families" [0m
+Rendering template within layouts/application
+Rendering families/index
+Rendered layouts/_header (0.00267)
+Completed in 0.03011 (33 reqs/sec) | Rendering: 0.00980 (32%) | DB: 0.00095 (3%) | 200 OK [http://0.0.0.0/families]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-09 17:41:20) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"main"}
+  [4;35;1mUser Load (0.000396)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering main/index
+Rendered layouts/_header (0.00326)
+Completed in 0.01934 (51 reqs/sec) | Rendering: 0.00505 (26%) | DB: 0.00040 (2%) | 200 OK [http://0.0.0.0/]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-09 17:41:27) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;36;1mUser Load (0.000462)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mFamily Load (0.000518)[0m   [0mSELECT * FROM "families" [0m
+Rendering template within layouts/application
+Rendering families/index
+Rendered layouts/_header (0.00260)
+Completed in 0.03149 (31 reqs/sec) | Rendering: 0.01049 (33%) | DB: 0.00098 (3%) | 200 OK [http://0.0.0.0/families]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2008-11-09 17:41:28) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"activities"}
+Rendering template within layouts/application
+Rendering activities/index
+  [4;36;1mUser Load (0.000453)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.01738)
+Completed in 0.02153 (46 reqs/sec) | Rendering: 0.01866 (86%) | DB: 0.00045 (2%) | 200 OK [http://0.0.0.0/activities]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-09 17:41:29) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;35;1mUser Load (0.000391)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.000454)[0m   [0;1mSELECT * FROM "families" [0m
+Rendering template within layouts/application
+Rendering families/index
+Rendered layouts/_header (0.00256)
+Completed in 0.02808 (35 reqs/sec) | Rendering: 0.00866 (30%) | DB: 0.00084 (3%) | 200 OK [http://0.0.0.0/families]
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2008-11-09 17:41:30) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiUzYWJmMDM5
+Yzk4MjRiYmU1ZDFlY2EzOTVlZWE5NmEyNSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b9fc8d27290887ae1ec3219a6b279d5c5fb47542
+  Parameters: {"action"=>"index", "controller"=>"activities"}
+Rendering template within layouts/application
+Rendering activities/index
+  [4;35;1mUser Load (0.000397)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered layouts/_header (0.01597)
+Completed in 0.01987 (50 reqs/sec) | Rendering: 0.01723 (86%) | DB: 0.00040 (1%) | 200 OK [http://0.0.0.0/activities]
