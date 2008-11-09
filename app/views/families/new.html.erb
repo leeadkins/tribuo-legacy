@@ -106,6 +106,19 @@
 		  	</p>
 		</td>
 	</tr>
+	
+	<tr>
+		<td>
+			<p>
+				<%= f.label :pickup, "Pickup/Delivery" %>:
+			</p>	
+		</td>
+		<td> 
+			<p>
+				<%= select (:family, :pickup, {"Pickup" => 0, "Delivery" => 1}) %>
+			</p>
+		</td>
+	</tr>
 </table>
 
 	<div id="children">

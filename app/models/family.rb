@@ -25,4 +25,12 @@ class Family < ActiveRecord::Base
       return "Yes"
     end
   end
+  
+  def human_pickup
+    if (pickup == 0)
+      return "Pickup"
+    else
+      return "Delivery"
+    end
+  end
 end

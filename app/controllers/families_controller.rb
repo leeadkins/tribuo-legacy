@@ -28,6 +28,7 @@ class FamiliesController < ApplicationController
   # GET /families/new.xml
   def new
     @family = Family.new
+    @family.pickup = 0
     @family.children.build
     
     respond_to do |format|
