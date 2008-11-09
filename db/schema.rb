@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081019194019) do
+ActiveRecord::Schema.define(:version => 20081109180940) do
 
   create_table "children", :force => true do |t|
     t.string   "name"
@@ -35,6 +35,15 @@ ActiveRecord::Schema.define(:version => 20081019194019) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "children_count", :default => 0
+  end
+
+  create_table "invitations", :force => true do |t|
+    t.integer  "sender_id"
+    t.string   "recipient_email"
+    t.string   "token"
+    t.datetime "sent_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "roles", :force => true do |t|
@@ -65,6 +74,8 @@ ActiveRecord::Schema.define(:version => 20081019194019) do
     t.string   "remember_token",            :limit => 40
     t.datetime "remember_token_expires_at"
     t.integer  "role_id"
+    t.integer  "invitation_id"
+    t.integer  "invitation_limit"
   end
 
   add_index "users", ["login"], :name => "index_users_on_login", :unique => true

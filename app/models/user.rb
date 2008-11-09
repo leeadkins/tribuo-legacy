@@ -19,13 +19,19 @@ class User < ActiveRecord::Base
   validates_length_of       :email,    :within => 6..100 #r@a.wk
   validates_uniqueness_of   :email
   validates_format_of       :email,    :with => Authentication.email_regex, :message => Authentication.bad_email_message
-
   
+  validates_presence_of :invitation_id, :message => " is required."
+  validates_uniqueness_of :invitation_id, :on => :create, :message => "can only be used once."
+
+  has_many :sent_invitations, :class_name => 'Invitation', :foreign_key => 'sender_id'
+  belongs_to :invitation
+  
+  before_create :set_invitation_limit
 
   # HACK HACK HACK -- how to do attr_accessible from here?
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
-  attr_accessible :login, :email, :name, :password, :password_confirmation
+  attr_accessible :login, :email, :name, :password, :password_confirmation, :invitation_token
 
 
 
@@ -49,6 +55,19 @@ class User < ActiveRecord::Base
     write_attribute :email, (value ? value.downcase : nil)
   end
 
+
+  def invitation_token
+    invitation.token if invitation
+  end
+  
+  def invitation_token=(token)
+    self.invitation = Invitation.find_by_token(token)
+  end
+
+  private
+  def set_invitation_limit
+    self.invitation_limit = 5
+  end
   protected
     
 

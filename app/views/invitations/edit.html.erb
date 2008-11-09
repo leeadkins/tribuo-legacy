@@ -1,0 +1,28 @@
+<h1>Editing invitation</h1>
+
+<% form_for(@invitation) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :sender_id %><br />
+    <%= f.text_field :sender_id %>
+  </p>
+  <p>
+    <%= f.label :recipient_email %><br />
+    <%= f.text_field :recipient_email %>
+  </p>
+  <p>
+    <%= f.label :token %><br />
+    <%= f.text_field :token %>
+  </p>
+  <p>
+    <%= f.label :sent_at %><br />
+    <%= f.datetime_select :sent_at %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @invitation %> |
+<%= link_to 'Back', invitations_path %>

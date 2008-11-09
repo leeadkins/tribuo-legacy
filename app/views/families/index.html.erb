@@ -49,6 +49,7 @@
     <td><%=h family.box %></td>
     <td><%= link_to 'Show', family %></td>
     <td><%= link_to 'Edit', edit_family_path(family) %></td>
+	<td><%= link_to 'Delete', family, :confirm => "Are you sure?", :method => "delete" %>
   </tr>
 <% end %>
 </table>

@@ -71,6 +71,6 @@
 <%= render :partial => @child = Child.new, 
    :locals => { :button_name => 'Create'}%>
 
-<%= link_to 'Children', family_children_path(@family) %>
-<%= link_to 'Edit', edit_family_path(@family) %> |
-<%= link_to 'Back', families_path %>
+<%= link_to 'View and Children', family_children_path(@family) %>
+<%= link_to 'Edit this Family', edit_family_path(@family) %> |
+<%= link_to 'Back to List', families_path %>

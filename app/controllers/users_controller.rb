@@ -4,7 +4,8 @@ class UsersController < ApplicationController
   # render new.rhtml
   before_filter :login_required, :except => [:new, :create]
   def new
-    @user = User.new
+    @user = User.new(:invitation_token => params[:invitation_token])
+    @user.email = @user.invitation.recipient_email if @user.invitation
   end
  
   def create
@@ -26,26 +27,23 @@ class UsersController < ApplicationController
   end
   
   def edit
-    unless Role.find(User.find(current_user.id).role).admin == "1"
-      if (current_user.id != params[:id])
-        flash[:notice] = "#{current_user.id} You do not have permission to edit this user. #{params[:id]}"
-        redirect_to :controller => "families", :action => "index"
-      else
-        @user = User.find(params[:id])
-      end
-    end
+    #  if (current_user.id != params[:id])
+     #   flash[:notice] = "#{current_user.id} You do not have permission to edit this user. #{params[:id]}"
+      #  redirect_to :controller => "families", :action => "index"
+      #else
+        @user = User.find(current_user.id)
+      #end
   end
   
   def update
-    def update
-      unless Role.find(User.find(current_user.id).role).admin == "1"
-        if (current_user.id != params[:id])
-          flash[:notice] = "You do not have permission to edit this user."
-          redirect_to :controller => "families", :action => "index"
-        else
-          @user = User.find(params[:id])
-        end
-      end
+      #unless Role.find(User.find(current_user.id).role).admin == "1"
+       # if (current_user.id != params[:id])
+        #  flash[:notice] = "You do not have permission to edit this user."
+        #  redirect_to :controller => "families", :action => "index"
+        #else
+          @user = User.find(current_user.id)
+        #end
+      #end
       respond_to do |format|
         if @user.update_attributes(params[:user])
           flash[:notice] = 'User was successfully updated.'
@@ -58,10 +56,14 @@ class UsersController < ApplicationController
           format.json { render :json => @user, :status => :unprocessable_entity}
         end
       end
-    end
   end
   
   def show
-    
+    @user = User.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @user.to_xml}
+    end
   end
 end

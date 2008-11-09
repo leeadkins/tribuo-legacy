@@ -6,7 +6,11 @@
 					<% if logged_in? %>
 					<p>
 						Welcome, <%= link_to_user current_user, :content_method => :name %><br/>
-						<%= link_to "Logout", logout_url %>
+						<%= link_to "Logout", logout_url %><br/>
+						<% if current_user.invitation_limit > 0 %>
+							<%= link_to 'Send invitation', new_invitation_path %>
+							(<%= current_user.invitation_limit %> left)
+						<% end %>
 					</p>
 					<% end %>
 				
