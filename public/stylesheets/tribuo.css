@@ -88,6 +88,17 @@ a img {
 	text-align: right;
 	background-color: #c5ec60;
 }
+
+#main #header #userman {
+	margin-left: 5px;
+	padding-right: 5px;
+	float: right;
+	height: 100px;
+	width: 195px;
+	text-align: right;
+	background-color: #F25D27;
+}
+
 #main #content {
 	clear: both;
 	background-color: white;

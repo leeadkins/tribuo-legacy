@@ -2,7 +2,7 @@
 				<div id="logo">
 					<%= link_to image_tag('tribuoheadermed.png'), :controller => :main, :action => :index %>
 				</div>
-				<div id="user">
+				<div id="<%= @IS_MAINTENANCE_MODE == "0" ? "user" : "userman" %>">
 					<% if logged_in? %>
 					<p>
 						Welcome, <%= link_to_user current_user, :content_method => :name %><br/>

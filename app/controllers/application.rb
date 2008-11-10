@@ -3,7 +3,7 @@
 class ApplicationController < ActionController::Base
   include AuthenticatedSystem
   helper :all # include all helpers, all the time
-
+  before_filter :load_global_settings
   # See ActionController::RequestForgeryProtection for details
   # Uncomment the :secret if you're not using the cookie session store
   protect_from_forgery # :secret => 'ea8331945316b5217ff6323e230c987e'
@@ -12,4 +12,8 @@ class ApplicationController < ActionController::Base
   # Uncomment this to filter the contents of submitted sensitive data parameters
   # from your application log (in this case, all fields with names like "password"). 
   # filter_parameter_logging :password
+  private
+  def load_global_settings
+    @IS_MAINTENANCE_MODE = Setting.find_by_name("maintenance").value
+  end
 end
