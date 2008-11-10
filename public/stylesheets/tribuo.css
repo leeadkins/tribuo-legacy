@@ -123,6 +123,11 @@ a img {
 	background-color:  white;
 	margin-left: 10px;
 }
+
+#main #page-wrapper #footer {
+	height: 100px;
+	display: block;
+}
 /*
 Styling for Families
 */
