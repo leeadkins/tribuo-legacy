@@ -125,6 +125,7 @@ a img {
 }
 
 #main #page-wrapper #footer {
+	clear: both;
 	height: 100px;
 	display: block;
 }
