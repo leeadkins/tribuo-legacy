@@ -12,6 +12,8 @@ class Family < ActiveRecord::Base
   validates_presence_of :childrensize, :on => :create, :message => "can't be blank"
   validates_presence_of :foodonly, :on => :create, :message => "can't be blank"
   
+  before_create :check_foodonly
+  
   def new_child_attributes=(child_attributes)
     child_attributes.each do |attributes|
       children.build(attributes)
@@ -32,5 +34,10 @@ class Family < ActiveRecord::Base
     else
       return "Delivery"
     end
+  end
+  
+  private
+  def check_foodonly
+    self.foodonly = 1 if self.childrensize == 0
   end
 end
