@@ -85,7 +85,8 @@ class ChildrenController < ApplicationController
     @child.destroy
 
     respond_to do |format|
-      format.html { redirect_to(family_children_url(@family)) }
+      flash[:notice] = 'Child removed.'
+      format.html { redirect_to(family_url(@family)) }
       format.xml  { head :ok }
     end
   end

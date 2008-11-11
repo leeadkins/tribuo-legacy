@@ -1,0 +1,7 @@
+<h1>Editing food_item</h1>
+
+<%= error_messages_for :food_item %>
+<%= render :partial => @food_item, :locals => {:button_name => "Update Parameter"} %>
+
+<%= link_to 'Show', [@food, @food_item] %> |
+<%= link_to 'Back', food_food_items_path(@food) %>

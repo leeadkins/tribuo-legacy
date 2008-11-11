@@ -1,0 +1,30 @@
+<% form_for([@food, @food_item]) do |f| %>
+<table>
+	<tr>
+		<th>
+			Quantity
+		</th>
+		<th>
+			Lower Bound
+		</th>
+		<th>
+			Upper Bound (blank for none)
+		</th>
+	</tr>
+	<tr>
+    	<td>	
+			<%= f.text_field :quantity, :size => 4 %>
+		</td>
+		<td>
+			<%= f.text_field :lower, :size => 4 %>
+		</td>
+		<td>
+			<%= f.text_field :upper, :size => 4 %>
+		</td>
+	</tr>
+</table>
+
+  <p>
+    <%= f.submit button_name %>
+  </p>
+<% end %>

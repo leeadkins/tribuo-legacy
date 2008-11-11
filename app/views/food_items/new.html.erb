@@ -1,0 +1,7 @@
+<h1>New Food Parameter</h1>
+
+<%= error_messages_for :food_item %>
+
+<%= render :partial => @food_item, :locals => {:button_name => "Add Parameter"} %>
+
+<%= link_to 'Back', food_food_items_path(@food) %>

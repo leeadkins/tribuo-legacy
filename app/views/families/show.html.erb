@@ -73,6 +73,9 @@ Directions: <br/>
 			<td>	
 				<%=h child.human_type %>
 			</td>
+			<td>
+				<%= link_to 'Remove', [@family, child], :confirm => 'Are you sure?', :method => :delete %>
+			</td>
 		</tr>
   <% end %>
 <% end %>

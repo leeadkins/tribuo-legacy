@@ -1,0 +1,24 @@
+<h1>Listing Food Item Parameters</h1>
+
+<table>
+  <tr>
+    <th>Quantity</th>
+    <th>Lower</th>
+    <th>Upper</th>
+  </tr>
+
+<% for food_item in @food_items %>
+  <tr>
+    <td><%=h food_item.quantity %></td>
+    <td><%=h food_item.lower %></td>
+    <td><%=h food_item.upper %></td>
+    <td><%= link_to 'Show', [@food, food_item] %></td>
+    <td><%= link_to 'Edit', [:edit, @food, food_item] %></td>
+    <td><%= link_to 'Destroy', [@food, food_item], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Parameter', new_food_food_item_path(@food) %>

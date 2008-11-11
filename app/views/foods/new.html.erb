@@ -1,0 +1,27 @@
+<h1>New food</h1>
+
+<% form_for(@food) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :cost %><br />
+    <%= f.text_field :cost %>
+  </p>
+
+<div id="food_items">
+	
+</div>
+<p>
+	<%= add_food_item_link "Add another Parameter"%>
+</p>
+<p>
+  <%= f.submit "Create" %>
+</p>
+
+<% end %>
+
+<%= link_to 'Back', foods_path %>

@@ -1,0 +1,32 @@
+
+<table id="food_list_table">
+	<tr>
+		<th>
+			Food
+		</th>
+		<th>
+			Quantity
+		</th>
+		<th>
+			Cost
+		</th>
+	</tr>
+<%
+for fd in @food
+%>
+	<tr>
+		<td>
+			<%= fd.name %> 
+		</td>
+		<td>
+			<%= @foodcounts[fd][:quantity] %>
+		</td>
+		<td>
+			<%= @foodcounts[fd][:cost] %>
+		</td>
+	</tr>
+<%	
+end
+%>
+
+</table>

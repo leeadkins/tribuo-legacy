@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :foods, :has_many => :food_items
+
   map.resources :invitations
 
   map.resources :settings

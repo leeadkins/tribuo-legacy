@@ -4,7 +4,7 @@ class FamiliesController < ApplicationController
   # GET /families
   # GET /families.xml
   def index
-    @families = Family.find(:all)
+    @families = Family.find(:all, :order => "lastname ASC")
 
     respond_to do |format|
       format.html # index.html.erb

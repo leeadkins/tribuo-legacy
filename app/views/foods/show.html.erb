@@ -1,0 +1,48 @@
+<p>
+  <b>Name:</b>
+  <%=h @food.name %>
+</p>
+
+<p>
+  <b>Cost:</b>
+  <%=h @food.cost %>
+</p>
+
+<div id="food_item_box">
+	<% unless @food.food_items.empty? %>
+	<table>
+		<tr>
+			<th>
+				Quantity
+			</th>
+			<th>
+				Lower Bound
+			</th>
+			<th>
+				Upper Bound
+			</th>
+		</tr>
+		<% @food.food_items.each do |food_item| %>
+		<tr>
+			<td>
+				<%= food_item.quantity %>
+			</td>
+			<td>
+				<%= food_item.lower %>
+			</td>
+			<td>
+				<%= food_item.upper %>
+			</td>
+		</tr>
+		<% end %>
+	</table>
+	<% end %>
+	<p>
+		Add another parameter
+	</p>
+	<%= render :partial => @food_item = FoodItem.new, :locals => {:button_name => 'Add Parameter'} %>
+</div>
+
+<%= link_to 'Edit Current Parameters', food_food_items_path(@food) %>
+<%= link_to 'Edit', edit_food_path(@food) %> |
+<%= link_to 'Back', foods_path %>

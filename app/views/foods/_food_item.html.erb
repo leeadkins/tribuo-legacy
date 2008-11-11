@@ -1,0 +1,12 @@
+<div class="food_item">
+<% new_or_existing = food_item.new_record? ? 'new' : 'existing' -%>
+<% prefix = "food[#{new_or_existing}_food_item_attributes][]" -%>
+<% fields_for prefix, food_item do |item_form| -%>
+<p>
+	Quantity: <%= item_form.text_field :quantity, :size => 4 %>
+	Lower:  <%= item_form.text_field :lower, :size => 4 %>
+    Upper:	<%= item_form.text_field :upper, :size => 4 %>
+	<%= link_to_function "remove", "$(this).up('.food_item').remove()" %>
+</p>
+<% end -%>	
+</div>

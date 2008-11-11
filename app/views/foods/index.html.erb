@@ -1,0 +1,21 @@
+<h1>Food List</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Cost</th>
+  </tr>
+
+<% for food in @foods %>
+  <tr>
+    <td><%= link_to "#{food.name}", food %></td>
+    <td><%=h food.cost %></td>
+    <td><%= link_to 'Show', food %></td>
+    <td><%= link_to 'Destroy', food, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New food', new_food_path %>

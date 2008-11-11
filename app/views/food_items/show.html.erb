@@ -1,0 +1,18 @@
+<p>
+  <b>Quantity:</b>
+  <%=h @food_item.quantity %>
+</p>
+
+<p>
+  <b>Lower:</b>
+  <%=h @food_item.lower %>
+</p>
+
+<p>
+  <b>Upper:</b>
+  <%=h @food_item.upper %>
+</p>
+
+
+<%= link_to 'Edit', [:edit, @food, @food_item] %> |
+<%= link_to 'Back', food_food_items_path(@food) %>
