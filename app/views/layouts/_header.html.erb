@@ -5,12 +5,12 @@
 				<div id="<%= @IS_MAINTENANCE_MODE == "0" ? "user" : "userman" %>">
 					<% if logged_in? %>
 					<p>
-						Welcome, <%= link_to_user current_user, :content_method => :name %><br/>
-						<%= link_to "Logout", logout_url %><br/>
+						<span class="logout-link"><%= link_to "Logout", logout_url %></span><br/>
 						<% if current_user.invitation_limit > 0 %>
-							<%= link_to 'Send invitation', new_invitation_path %>
-							(<%= current_user.invitation_limit %> left)
+						<span class="invite-link">	<%= link_to 'Send invitation', new_invitation_path %>
+							(<%= current_user.invitation_limit %> left)</span><br/>
 						<% end %>
+						<span class="user-greeting"><%= link_to_user current_user, :content_method => :name %></span>
 					</p>
 					<% end %>
 				

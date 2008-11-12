@@ -1,4 +1,7 @@
 <% content_for :sidebar do %>
+<p>
+	<%= link_to image_tag('new_family_icon.png'), new_family_path %>
+</p>
 	<p>
 		Currently <%= Family.count %> families in Tribuo.
 	</p>
@@ -24,8 +27,8 @@
 	<% end %>	
 	<%= link_to "Reset", :controller => "families" %>
 </p>
-<table>
-  <tr>
+<table class="family-list">
+  <tr class="family-list-header">
     <th><%= link_to "Last Name", :controller => "families", :order => "lastname", :search => params[:search], :page => params[:page] %></th>
     <th><%= link_to "First Name", :controller => "families", :order => "firstname", :search => params[:search], :page => params[:page] %></th>
     <th><%= link_to "Phone", :controller => "families", :order => "phone", :search => params[:search] %></th>
@@ -44,16 +47,15 @@
 	
 %>
   <tr class="<%= familyliststyle %>">
-    <td><%=h family.lastname %></td>
-    <td><%=h family.firstname %></td>
-    <td><%=h family.phone %></td>
-    <td><%=h family.familysize %></td>
-    <td><%=h family.childrensize %></td>
-    <td><%=h family.human_foodonly %></td>
-    <td><%=h family.box %></td>
-    <td><%= link_to 'Show', family %></td>
-    <td><%= link_to 'Edit', edit_family_path(family) %></td>
-	<td><%= link_to 'Delete', family, :confirm => "Are you sure?", :method => "delete" %>
+    <td class="family-row-lastname"><%=h family.lastname %></td>
+    <td class="family-row-firstname"><%=h family.firstname %></td>
+    <td class="family-row-phone"><%=h family.phone %></td>
+    <td class="family-row-size"><%=h family.familysize %></td>
+    <td class="family-row-childrensize"><%=h family.childrensize %></td>
+    <td class="family-row-foodonly"><%=h family.human_foodonly %></td>
+    <td class="family-row-box"><%=h family.box %></td>
+    <td><span class="family-row-action"><%= link_to 'Show', family %></span></td>
+	<td><span class="family-row-action"><%= link_to 'Delete', family, :confirm => "Are you sure?", :method => "delete" %></span></td>
   </tr>
 <% end %>
 </table>

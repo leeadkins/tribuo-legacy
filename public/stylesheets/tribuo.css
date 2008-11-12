@@ -5,6 +5,7 @@
 	http://0.0.0.0:3000/stylesheets/tribuo.css?1224379990
 	http://0.0.0.0:3000/stylesheets/tribuo.css?1224516208
 	http://0.0.0.0:3000/stylesheets/tribuo.css?1224727820
+	http://0.0.0.0:3000/stylesheets/tribuo.css?1226286439
 */
 
 body {
@@ -66,6 +67,7 @@ a img {
 	display: block;
 	line-height: 150px;
 	overflow: hidden;
+	background-image: url(../images/nav_icon_bg.png);
 }
 
 #main #header #menu li a:hover {
@@ -77,26 +79,31 @@ a img {
 	display: block;
 	line-height: 150px;
 	overflow: hidden;
+	background-image: url(../images/nav_icon_bg_hover.png);
 }
 
 #main #header #user {
 	margin-left: 5px;
 	padding-right: 5px;
 	float: right;
-	height: 100px;
+	height: 90px;
 	width: 195px;
 	text-align: right;
 	background-color: #c5ec60;
+	background-image: url(../images/user_block_bg.png);
+	padding-top: 10px;
 }
 
 #main #header #userman {
 	margin-left: 5px;
 	padding-right: 5px;
 	float: right;
-	height: 100px;
+	height: 90px;
 	width: 195px;
 	text-align: right;
+	padding-top: 10px;
 	background-color: #F25D27;
+	background-image: url(../images/user_block_man_bg.png);
 }
 
 #main #content {
@@ -113,6 +120,7 @@ a img {
 	background-color: #dad1cc;
 	font: 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #352f2c;
+	background-image: url(../images/sidebar_bg.png);
 }
 
 #main #content #workspace {
@@ -143,6 +151,68 @@ Styling for Families
 	padding: 0px;
 }
 
+.family-list {
+	font: 18px "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+.family-list-header a {
+	text-decoration: none;
+	color: black;
+}
+
+.family-list-header a:hover {
+	text-decoration: underline;
+	color: maroon;
+}
+
+
+.family-list tr td {
+	padding-right: 15px;
+	margin: 0px;
+	border-bottom: 1px solid silver;
+}
+
+.family-row-action a{
+	text-align: center;
+	display: block;
+	width: 65px;
+	color: white;
+	background-color: navy;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-decoration: none;
+}
+
+.family-row-action a:hover {
+	text-align: center;
+	color: orange;
+	width: 65px;
+	background-color: red;
+}
+
+.family-row-childrensize {
+	text-align: center;
+}
+
+.family-row-size {
+	text-align: center;
+}
+.family-row-foodonly {
+	text-align: center;
+}
+
+.user-greeting a{
+	color: White;
+	text-decoration: none;
+	font: bold 24px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+.logout-link a, .invite-link a{
+	color: black;
+	text-decoration: none;
+}
+
+.logout-link a:hover, .invite-link a:hover{
+	color: red;
+	text-decoration: underline;
+}
 /*
 Styling for public facing 
 login page
