@@ -16,8 +16,13 @@
 	</p>
 <% end %>
 
-<h1>Families</h1>
-
+<p>Search (via Last Name for now):
+	<% form_tag families_path, :method => 'get' do %>
+	  <%= text_field_tag :search, params[:search] %>
+	  <%= submit_tag "Search", :name => nil %>
+	<% end %>	
+	<%= link_to "Reset", :controller => "families" %>
+</p>
 <table>
   <tr>
     <th>Last Name</th>
