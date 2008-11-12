@@ -4,8 +4,8 @@ class FamiliesController < ApplicationController
   # GET /families
   # GET /families.xml
   def index
-    @families = Family.find(:all, :order => "lastname ASC")
-
+    #@families = Family.find(:all, :order => "lastname ASC")
+    @families = Family.paginate :per_page => 25, :page => params[:page], :conditions => ['lastname like ?', "%#{params[:search]}"], :order => 'lastname ASC'
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @families }
