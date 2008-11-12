@@ -19,19 +19,20 @@
 <p>Search (via Last Name for now):
 	<% form_tag families_path, :method => 'get' do %>
 	  <%= text_field_tag :search, params[:search] %>
+	  <%= select_tag :searchfield, options_for_select({'Last Name' => 'lastname', 'First Name' => 'firstname'}, 'lastname')%>
 	  <%= submit_tag "Search", :name => nil %>
 	<% end %>	
 	<%= link_to "Reset", :controller => "families" %>
 </p>
 <table>
   <tr>
-    <th>Last Name</th>
-    <th>First Name</th>
-    <th>Phone</th>
-    <th>Size</th>
-    <th>Children</th>
-    <th>Food Only?</th>
-    <th>Box</th>
+    <th><%= link_to "Last Name", :controller => "families", :order => "lastname", :search => params[:search], :page => params[:page] %></th>
+    <th><%= link_to "First Name", :controller => "families", :order => "firstname", :search => params[:search], :page => params[:page] %></th>
+    <th><%= link_to "Phone", :controller => "families", :order => "phone", :search => params[:search] %></th>
+    <th><%= link_to "Size", :controller => "families", :order => "familysize", :search => params[:search] %></th>
+    <th><%= link_to "Children", :controller => "families", :order => "childrensize", :search => params[:search] %></th>
+    <th><%= link_to "Food Only?", :controller => "families", :order => "foodonly", :search => params[:search] %></th>
+    <th><%= link_to "Box", :controller => "families", :order => "box", :search => params[:search] %></th>
   </tr>
 
 <% for family in @families %>

@@ -4,8 +4,12 @@ class FamiliesController < ApplicationController
   # GET /families
   # GET /families.xml
   def index
+    #Setup for some default search params
+    !params[:order] ? params[:order] = 'lastname' : params[:order]
+    !params[:direction] ? params[:direction] = 'ASC' : params[:direction]
+    
     #@families = Family.find(:all, :order => "lastname ASC")
-    @families = Family.paginate :per_page => 25, :page => params[:page], :conditions => ['upper(lastname) like upper(?)', "%#{params[:search]}"], :order => 'lastname ASC'
+    @families = Family.paginate :per_page => 20, :page => params[:page], :conditions => ["lastname like ?", "%#{params[:search]}"], :order => "#{params[:order]} #{params[:direction]}"
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @families }
