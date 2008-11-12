@@ -13200,3 +13200,86 @@ Rendering families/index
   [4;35;1mSQL (0.000190)[0m   [0mSELECT count(*) AS count_all FROM "families" [0m
 Rendered layouts/_header (0.00302)
 Completed in 0.03808 (26 reqs/sec) | Rendering: 0.01062 (27%) | DB: 0.00270 (7%) | 200 OK [http://0.0.0.0/families]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-11 18:33:39) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiVhZjQ3OGUw
+ZmMzYTVhZWYyMjg5MjMxMGM3M2U4YTI2MSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--e7eab92b0da7563edb2521dc53fc5380d6425d90
+  Parameters: {"action"=>"index", "controller"=>"main"}
+  [4;36;1mSetting Load (0.000330)[0m   [0;1mSELECT * FROM "settings" WHERE ("settings"."name" = 'maintenance') LIMIT 1[0m
+  [4;35;1mUser Load (0.000502)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering main/index
+Rendered layouts/_header (0.00537)
+Completed in 0.03822 (26 reqs/sec) | Rendering: 0.01152 (30%) | DB: 0.00083 (2%) | 200 OK [http://0.0.0.0/]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-11 18:33:40) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiVhZjQ3OGUw
+ZmMzYTVhZWYyMjg5MjMxMGM3M2U4YTI2MSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--e7eab92b0da7563edb2521dc53fc5380d6425d90
+  Parameters: {"action"=>"index", "controller"=>"families"}
+  [4;36;1mSetting Load (0.000337)[0m   [0;1mSELECT * FROM "settings" WHERE ("settings"."name" = 'maintenance') LIMIT 1[0m
+  [4;35;1mUser Load (0.000442)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.001846)[0m   [0;1mSELECT * FROM "families" WHERE (lastname like '%') ORDER BY lastname ASC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering families/index
+  [4;35;1mSQL (0.000241)[0m   [0mSELECT count(*) AS count_all FROM "families" [0m
+Rendered layouts/_header (0.00276)
+Completed in 0.12100 (8 reqs/sec) | Rendering: 0.01352 (11%) | DB: 0.00287 (2%) | 200 OK [http://0.0.0.0/families]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-11 18:34:01) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiVhZjQ3OGUw
+ZmMzYTVhZWYyMjg5MjMxMGM3M2U4YTI2MSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--e7eab92b0da7563edb2521dc53fc5380d6425d90
+  Parameters: {"search"=>"smith", "action"=>"index", "controller"=>"families"}
+  [4;36;1mSetting Load (0.000278)[0m   [0;1mSELECT * FROM "settings" WHERE ("settings"."name" = 'maintenance') LIMIT 1[0m
+  [4;35;1mUser Load (0.000436)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.001129)[0m   [0;1mSELECT * FROM "families" WHERE (lastname like '%smith') ORDER BY lastname ASC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering families/index
+  [4;35;1mSQL (0.000242)[0m   [0mSELECT count(*) AS count_all FROM "families" [0m
+Rendered layouts/_header (0.00289)
+Completed in 0.03544 (28 reqs/sec) | Rendering: 0.00966 (27%) | DB: 0.00208 (5%) | 200 OK [http://0.0.0.0/families?search=smith]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-11 18:34:06) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiVhZjQ3OGUw
+ZmMzYTVhZWYyMjg5MjMxMGM3M2U4YTI2MSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--e7eab92b0da7563edb2521dc53fc5380d6425d90
+  Parameters: {"search"=>"Smith", "action"=>"index", "controller"=>"families"}
+  [4;36;1mSetting Load (0.000296)[0m   [0;1mSELECT * FROM "settings" WHERE ("settings"."name" = 'maintenance') LIMIT 1[0m
+  [4;35;1mUser Load (0.000451)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.001165)[0m   [0;1mSELECT * FROM "families" WHERE (lastname like '%Smith') ORDER BY lastname ASC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering families/index
+  [4;35;1mSQL (0.000193)[0m   [0mSELECT count(*) AS count_all FROM "families" [0m
+Rendered layouts/_header (0.00314)
+Completed in 0.11967 (8 reqs/sec) | Rendering: 0.01011 (8%) | DB: 0.00211 (1%) | 200 OK [http://0.0.0.0/families?search=Smith]
+
+
+Processing FamiliesController#index (for 127.0.0.1 at 2008-11-11 18:34:09) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiVhZjQ3OGUw
+ZmMzYTVhZWYyMjg5MjMxMGM3M2U4YTI2MSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--e7eab92b0da7563edb2521dc53fc5380d6425d90
+  Parameters: {"search"=>"Smith", "action"=>"index", "controller"=>"families"}
+  [4;36;1mSetting Load (0.000349)[0m   [0;1mSELECT * FROM "settings" WHERE ("settings"."name" = 'maintenance') LIMIT 1[0m
+  [4;35;1mUser Load (0.000447)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mFamily Load (0.001151)[0m   [0;1mSELECT * FROM "families" WHERE (lastname like '%Smith') ORDER BY lastname ASC LIMIT 25 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering families/index
+  [4;35;1mSQL (0.000190)[0m   [0mSELECT count(*) AS count_all FROM "families" [0m
+Rendered layouts/_header (0.00294)
+Completed in 0.04080 (24 reqs/sec) | Rendering: 0.00977 (23%) | DB: 0.00214 (5%) | 200 OK [http://0.0.0.0/families?search=Smith]
+  [4;36;1mFamily Load (0.001859)[0m   [0;1mSELECT * FROM "families" [0m
+  [4;35;1mFamily Load (0.000000)[0m   [0mSQLite3::SQLException: no such column: plum: SELECT * FROM "families" WHERE (lastname LIKE plum) [0m
+  [4;36;1mFamily Load (0.000000)[0m   [0;1mSQLite3::SQLException: no such column: plum: SELECT * FROM "families" WHERE (lastname like plum) [0m
+  [4;35;1mFamily Load (0.000277)[0m   [0mSELECT * FROM "families" WHERE (lastname like 'plum') [0m
+  [4;36;1mFamily Load (0.000832)[0m   [0;1mSELECT * FROM "families" WHERE (lastname like 'plumber') [0m
+  [4;35;1mFamily Load (0.000342)[0m   [0mSELECT * FROM "families" WHERE (lastname like 'plum') [0m
+  [4;36;1mFamily Load (0.000380)[0m   [0;1mSELECT * FROM "families" WHERE (lastname like 'p') [0m
+  [4;35;1mFamily Load (0.000261)[0m   [0mSELECT * FROM "families" WHERE (lastname = 'p') [0m
+  [4;36;1mFamily Load (0.000251)[0m   [0;1mSELECT * FROM "families" WHERE (lastname = 'plumber') [0m
+  [4;35;1mFamily Load (0.000884)[0m   [0mSELECT * FROM "families" WHERE (lastname = 'Plumber') [0m
