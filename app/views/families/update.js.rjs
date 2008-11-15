@@ -1,0 +1,3 @@
+page["family_#{@family.id}"].visual_effect :highlight
+page<<"$('family_#{@family.id}').style.background='#{@listcolor}'"
+page<<"$('flag_image_#{@family.id}').src = '#{@flagimage}'"

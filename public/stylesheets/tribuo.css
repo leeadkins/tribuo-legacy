@@ -144,6 +144,13 @@ Styling for Families
 	background-color: red;
 }
 
+.family-row-flagged {
+	background-color: #89c2ea;
+	margin: 0px;
+	border: 0px;
+	padding: 0px;	
+}
+
 .family-row {
 	background-color: white;
 	margin: 0px;
@@ -152,7 +159,7 @@ Styling for Families
 }
 
 .family-list {
-	font: 18px "Lucida Grande", Lucida, Verdana, sans-serif;
+	font: 16px "Lucida Grande", Lucida, Verdana, sans-serif;
 }
 .family-list-header a {
 	text-decoration: none;
@@ -267,4 +274,9 @@ Styling for Family Show Page
 */
 .show_family_name {
 	font-size: 1.7em;
+}
+
+.family_flag_image {
+	width: 25px;
+	height: 25px;
 }

@@ -21,7 +21,13 @@ class FamiliesController < ApplicationController
   # GET /families/1.xml
   def show
     @family = Family.find(params[:id], :include => :children)
-
+    if (@family.flag == true)
+      @flagimage = 'StarIconGold.png'
+      @flagcolor = '#89c2ea'
+    else
+      @flagimage = 'StarIconSilver.png'
+      @flagcolor = 'white'
+    end
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @family.to_xml(:include => :children) }
@@ -33,6 +39,7 @@ class FamiliesController < ApplicationController
   def new
     @family = Family.new
     @family.pickup = 0
+    @family.flag = false
     @family.children.build
     
     respond_to do |format|
@@ -67,17 +74,30 @@ class FamiliesController < ApplicationController
   # PUT /families/1.xml
   def update
     @family = Family.find(params[:id])
-
+    #setup a few things for the RJS call
+    if (params[:flag] == "true")
+      if (@family.flag == nil || @family.flag == false)
+        @family.flag = true
+        @listcolor = '#89c2ea'
+        @flagimage = "../../images/StarIconGold.png"
+      else
+        @family.flag = false
+        @listcolor = "white"
+        @flagimage = "../../images/StarIconSilver.png"
+      end
+    end
     respond_to do |format|
       if @family.update_attributes(params[:family])
         flash[:notice] = 'Family was successfully updated.'
         format.html { redirect_to(@family) }
         format.xml  { head :ok }
         format.json { render :json => @family }
+        format.js { render :layout => false}
       else
         format.html { render :action => "edit" }
         format.xml  { render :xml => @family.errors, :status => :unprocessable_entity }
         format.json { render :json => @family, :status => :unprocessable_entity}
+        format.js
       end
     end
   end
