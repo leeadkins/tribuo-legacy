@@ -12,6 +12,7 @@
 		</th>
 	</tr>
 <%
+@foodtotal = 0
 for fd in @food
 %>
 	<tr>
@@ -23,6 +24,7 @@ for fd in @food
 		</td>
 		<td>
 			<%= @foodcounts[fd][:cost] %>
+			<% @foodtotal += @foodcounts[fd][:cost] -%>
 		</td>
 	</tr>
 <%	
