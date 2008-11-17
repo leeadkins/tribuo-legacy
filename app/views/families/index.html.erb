@@ -22,7 +22,7 @@
 <p>Search (via Last Name for now):
 	<% form_tag families_path, :method => 'get' do %>
 	  <%= text_field_tag :search, params[:search] %>
-	  <%= select_tag :searchfield, options_for_select({'Last Name' => 'lastname', 'First Name' => 'firstname'}, 'lastname')%>
+	  <%= select_tag :searchfield, options_for_select({'Last Name' => 'lastname', 'First Name' => 'firstname', 'Phone' => 'phone', 'Address' => 'address', 'Size' => 'size', 'Children' => 'childrensize', 'Box' => 'box'}, params[:searchfield]) %>
 	  <%= submit_tag "Search", :name => nil %>
 	<% end %>	
 	<%= link_to "Reset", :controller => "families" %>
@@ -55,7 +55,7 @@
 	
 %>
   <tr id= "family_<%= family.id %>" class="<%= familyliststyle %>">
-	<td class="family-row-flag"><%= link_to_remote image_tag(flagimage,:id => "flag_image_#{family.id}", :class => 'family_flag_image'), :url => family_url(:id => family.id, :flag => true), :method => :put %></td>
+	<td class="family-row-flag"><%= link_to_remote image_tag(flagimage,:id => "flag_image_#{family.id}", :class => 'family_flag_image'), :url => {:controller => 'javascripts', :action => 'flag_family', :id => family.id, :flag => true}, :method => :put %></td>
     <td class="family-row-lastname"><%=h family.lastname %></td>
     <td class="family-row-firstname"><%=h family.firstname %></td>
     <td class="family-row-phone"><%=h family.phone %></td>

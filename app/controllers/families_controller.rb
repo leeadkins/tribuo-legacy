@@ -7,9 +7,9 @@ class FamiliesController < ApplicationController
     #Setup for some default search params
     !params[:order] ? params[:order] = 'lastname' : params[:order]
     !params[:direction] ? params[:direction] = 'ASC' : params[:direction]
-    
+    !params[:searchfield] ? params[:searchfield] = 'lastname' : params[:searchfield]
     #@families = Family.find(:all, :order => "lastname ASC")
-    @families = Family.paginate :per_page => 20, :page => params[:page], :conditions => ["lastname like ?", "%#{params[:search]}"], :order => "#{params[:order]} #{params[:direction]}"
+    @families = Family.paginate :per_page => 20, :page => params[:page], :conditions => ["#{params[:searchfield]} like ?", "%#{params[:search]}"], :order => "#{params[:order]} #{params[:direction]}"
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @families }
@@ -74,30 +74,16 @@ class FamiliesController < ApplicationController
   # PUT /families/1.xml
   def update
     @family = Family.find(params[:id])
-    #setup a few things for the RJS call
-    if (params[:flag] == "true")
-      if (@family.flag == nil || @family.flag == false)
-        @family.flag = true
-        @listcolor = '#89c2ea'
-        @flagimage = "../../images/StarIconGold.png"
-      else
-        @family.flag = false
-        @listcolor = "white"
-        @flagimage = "../../images/StarIconSilver.png"
-      end
-    end
     respond_to do |format|
       if @family.update_attributes(params[:family])
         flash[:notice] = 'Family was successfully updated.'
         format.html { redirect_to(@family) }
         format.xml  { head :ok }
         format.json { render :json => @family }
-        format.js { render :layout => false}
       else
         format.html { render :action => "edit" }
         format.xml  { render :xml => @family.errors, :status => :unprocessable_entity }
         format.json { render :json => @family, :status => :unprocessable_entity}
-        format.js
       end
     end
   end

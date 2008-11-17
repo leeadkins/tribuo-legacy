@@ -5,6 +5,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :settings
 
+  map.children '/children.:format', :controller => 'children', :action => 'index'
+
   map.resources :families, :has_many => :children
 
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'

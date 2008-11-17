@@ -32,7 +32,7 @@
 <%= editable_content_tag(:span, @family, 'lastname', true, nil,{:class => "show_family_name"},{:okText => 'Save'}) %>
 </p>
 <span id="family_<%= @family.id %>">Flagged? </span>
-<%= link_to_remote image_tag(@flagimage, :class => 'family_flag_image', :id=>"flag_image_#{@family.id}"), :url => family_url(:id => @family.id, :flag => true), :method => :put %>
+<%= link_to_remote image_tag(@flagimage, :class => 'family_flag_image', :id=>"flag_image_#{@family.id}"), :url => {:controller => 'javascripts', :action => 'flag_family', :id => @family.id, :flag => true}, :method => :put %>
 
 <br/>
 <p>Phone:<br/> 
