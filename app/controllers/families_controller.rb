@@ -9,7 +9,7 @@ class FamiliesController < ApplicationController
     !params[:direction] ? params[:direction] = 'ASC' : params[:direction]
     !params[:searchfield] ? params[:searchfield] = 'lastname' : params[:searchfield]
     #@families = Family.find(:all, :order => "lastname ASC")
-    @families = Family.paginate :per_page => 20, :page => params[:page], :conditions => ["#{params[:searchfield]} like ?", "%#{params[:search]}"], :order => "#{params[:order]} #{params[:direction]}"
+    @families = Family.paginate :per_page => 20, :page => params[:page], :conditions => ["#{params[:searchfield]} like ?", "%#{params[:search]}%"], :order => "#{params[:order]} #{params[:direction]}"
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @families }
