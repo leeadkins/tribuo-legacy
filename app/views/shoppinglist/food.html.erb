@@ -5,13 +5,20 @@
 			Food
 		</th>
 		<th>
-			Quantity
+			Real Quantity
 		</th>
 		<th>
-			Cost
+			Real Cost
+		</th>
+		<th>
+			With Extra Quantity
+		</th>
+		<th>
+			With Extra Cost
 		</th>
 	</tr>
 <%
+@extratotal = 0
 @foodtotal = 0
 for fd in @food
 %>
@@ -26,6 +33,13 @@ for fd in @food
 			<%= @foodcounts[fd][:cost] %>
 			<% @foodtotal += @foodcounts[fd][:cost] -%>
 		</td>
+		<td>
+			<%= @foodcounts[fd][:quanextra] %>
+		</td>
+		<td>
+			<%= @foodcounts[fd][:costextra] %>
+			<% @extratotal += @foodcounts[fd][:costextra] -%>
+		</td>
 	</tr>
 <%	
 end
@@ -38,6 +52,11 @@ end
 		</td>
 		<td>
 			<%= @foodtotal %>
+		</td>
+		<td>
+		</td>
+		<td>
+			<%= @extratotal %>
 		</td>
 	</tr>
 </table>

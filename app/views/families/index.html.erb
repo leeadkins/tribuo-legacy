@@ -19,7 +19,7 @@
 	</p>
 <% end %>
 
-<p>Search (via Last Name for now):
+<p>Search:
 	<% form_tag families_path, :method => 'get' do %>
 	  <%= text_field_tag :search, params[:search] %>
 	  <%= select_tag :searchfield, options_for_select({'Last Name' => 'lastname', 'First Name' => 'firstname', 'Phone' => 'phone', 'Address' => 'address', 'Size' => 'familysize', 'Children' => 'childrensize', 'Box' => 'box'}, params[:searchfield]) %>

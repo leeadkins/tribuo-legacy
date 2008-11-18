@@ -15,5 +15,10 @@ class ApplicationController < ActionController::Base
   private
   def load_global_settings
     @IS_MAINTENANCE_MODE = Setting.find_by_name("maintenance").value
+    if Setting.find_by_name("extraboxes")
+      @EXTRA_BOXES = Setting.find_by_name("extraboxes").value.to_i
+    else
+      @EXTRA_BOXES = 40
+    end
   end
 end
