@@ -1,2 +1,52 @@
-<h1>Shoppinglist#toys</h1>
-<p>Find me in app/views/shoppinglist/toys.html.erb</p>
+<% content_for :sidebar do %>
+	<p>
+		A breakdown of numbers of children.
+	</p>
+<% end %>
+<div id="toyshoppinglistcontainer">
+<table id="toytable" class="toycountdisplay">
+	<tr class="toyrow" id="toyheader">
+		<th class="toyheaderitem">
+			Age
+		</th>
+		<th class="toyheaderitem">
+			Boys
+		</th>
+		<th class="toyheaderitem">
+			Girls
+		</th>
+		<th class="toyheaderitem">
+			Total
+		</th>
+	</tr>
+	<% for i in 0..@colsize-1 %>
+	<tr class="<%= cycle("toyroweven", "toyrowodd")%>">
+		<% if i == 0%>
+		<td class="toycolumnage">Months</td>
+		<td class="toycolumnitem"><%= link_to @boyarray[i], :action => 'children', :agetype => 1, :gender => 0 %></td>
+		<td class="toycolumnitem"><%= link_to @girlarray[i], :action => 'children', :agetype => 1, :gender => 1 %></td>
+		<td class="toycolumntotal"> <%= link_to @girlarray[i] + @boyarray[i], :action => 'children', :agetype => 1 %></td>	
+		<% else %>
+		<td class="toycolumnage"><%= i %></td>
+		<td class="toycolumnitem"><%= link_to @boyarray[i], :action => 'children', :agetype => 0, :gender => 0, :age => i %></td>
+		<td class="toycolumnitem"><%= link_to @girlarray[i], :action => 'children', :agetype => 0, :gender => 1, :age => i %></td>
+		<td class="toycolumntotal"> <%= link_to @girlarray[i] + @boyarray[i], :action => 'children', :agetype => 0, :age => i %></td>	
+		<% end %>
+	</tr>
+	<% end %>
+	<tr class="toyrow">
+		<td class="toycolumntotal">
+			Totals
+		</td>
+		<td class="toycolumntotal">
+			<%= @boytotal %>
+		</td>
+		<td class="toycolumntotal">
+			<%= @girltotal %>
+		</td>
+		<td class="toycolumntotal">
+			<%= @girltotal + @boytotal %>
+		</td>
+	</tr>
+</table>
+</div>

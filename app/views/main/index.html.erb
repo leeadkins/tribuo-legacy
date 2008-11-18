@@ -2,32 +2,23 @@
 <p>
 	<%= link_to image_tag('newfamilyicon.jpg'), new_family_path %>
 </p>
+	<p>
+	Stats:<br/>
+	Families: <%= Family.count %><br/>
+	Children: <%= Child.count %><br/>
+	</p>
 	<p>This is Tribuo. On this main page, you can get updates on the status of your project and see any issues that need to be taken care of.</p>
 <% end %>
 
-<p>Welcome to Tribuo.</p>
-
-<p>
-News (Last updated: 11-17-08 at 6:40PM)
-
-</p>
-<p>
-	Fixed the image problem on Internet Explorer and Firefox on PCs. I'd still recommend using Firefox, but IE should be prettier now.  
-	
-	Search system is more robust. It is still case sensitive, but it does have partial text search and more fields to sort by.
-	
-	The Shopping List activity now properly predicts food cost with extra boxes figured in.  The default is 40 extra, but this can be changed in the Settings. (by creating a new setting called "extraboxes" and giving it the value you want).
-</p>
-<p>
-	Added a flagging system.  You can now click the Star icon beside a family to flag them instead of using the children size hack.  Flagging works best from the List view, but you can also flag during family creation and on the family show page.	
-</p>
-<p>
-	Started cleaning up the views. Family list was first. As well as the header.  You can now click any of the column labels to resort the list by that parameter. Search is there still, only by last name still. It is case sensitive right now, so Alder will give results, but alder won't. Expect individual family pages to get a makeover next.
-</p>
-<p>
-	Rough Search has been added. It might be useful while you enter stuff, so I went ahead and turned it on.  You can only search by lastname for now. I'll expand on that later.
-</p>	
-<p>
-	The Families list is now ordered by Last name, and a rough system for Search is being implemented on the back end and will be revealed for you later.  You'll also notice the list "paginates", or limits the number of families per page to 25 to allow for easier viewing. There are now a few links in the Activities page to play with. You can add food items to track and view a Shopping List afterwards.
-</p>
-<p>Stats at glance:</p>
+<div class="news" id="tribuonews">
+	<% for post in @posts %>
+	<div class="post_item"id="post_<%= post.id %>">
+		<p class="post-title"><%=h post.title %></p>
+		<p class="post-author">posted by <%= link_to post.user.name, user_url(post.user) %> <%= distance_of_time_in_words(Time.now, post.created_at, false)%> ago</p>
+		<p class="post-body"><%=h post.body %></p>
+	</div>
+	<% end %>
+	<p>
+		<%= link_to "Read More...", posts_url %>
+	</p>
+</div>

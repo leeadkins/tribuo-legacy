@@ -1,5 +1,9 @@
-
-<table id="food_list_table">
+<% content_for :sidebar do %>
+	<p>
+		On the Food Shopping list, you can view the actual quantities and costs associated with the families you've already entered.  The second set of columns estimates the necessary quantities and costs needed to cover your actual families and the reserve boxes usually created, which defaults at 40.
+	</p>
+<% end %>
+<table id="food_list_table" class="family-list">
 	<tr>
 		<th>
 			Food
@@ -21,8 +25,9 @@
 @extratotal = 0
 @foodtotal = 0
 for fd in @food
+	rowclass = cycle("family-row-even", "family-row-odd")
 %>
-	<tr>
+	<tr class="<%= rowclass %>">
 		<td>
 			<%= fd.name %> 
 		</td>

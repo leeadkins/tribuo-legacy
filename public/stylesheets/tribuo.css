@@ -6,6 +6,8 @@
 	http://0.0.0.0:3000/stylesheets/tribuo.css?1224516208
 	http://0.0.0.0:3000/stylesheets/tribuo.css?1224727820
 	http://0.0.0.0:3000/stylesheets/tribuo.css?1226286439
+	http://0.0.0.0:3000/stylesheets/tribuo.css?1226967786
+	http://0.0.0.0:3000/stylesheets/tribuo.css?1226984155
 */
 
 body {
@@ -151,8 +153,15 @@ Styling for Families
 	padding: 0px;	
 }
 
-.family-row {
+.family-row-odd {
 	background-color: white;
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+
+.family-row-even {
+	background-color: #f0ecff;
 	margin: 0px;
 	border: 0px;
 	padding: 0px;
@@ -160,6 +169,9 @@ Styling for Families
 
 .family-list {
 	font: 16px "Lucida Grande", Lucida, Verdana, sans-serif;
+}
+.family-list-header {
+	background-color: #white;
 }
 .family-list-header a {
 	text-decoration: none;
@@ -175,7 +187,7 @@ Styling for Families
 .family-list tr td {
 	padding-right: 15px;
 	margin: 0px;
-	border-bottom: 1px solid silver;
+	/* border-bottom: 1px solid silver; */
 }
 
 .family-row-action a{
@@ -279,4 +291,88 @@ Styling for Family Show Page
 .family_flag_image {
 	width: 25px;
 	height: 25px;
+}
+
+/*
+	Styling for Toy Shopping List
+*/
+.toyrow {
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	padding: 5px;
+	background-color: #cdd3dd;
+	color: #000;
+}
+
+.toyrowodd {
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	padding: 5px;
+	background-color: #fdfdf5;
+}
+.toyroweven {
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	padding: 5px;
+	background-color: #eefcf9;
+}
+.toycolumnage {
+	font-weight: bold;
+	background-color: #e9f1fc;
+	color: #000;
+	text-align: center;
+	vertical-align: middle;
+	border: none;
+}
+.toycolumnitem {
+	font-size: 23px;
+	text-align: center;
+	width: 75px;
+	border: none;
+}
+.toyheaderitem {
+	text-align: center;
+}
+
+.toycolumntotal {
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 23px;
+	text-align: center;
+	width: 75px;
+}
+.toycolumntotal a {
+	text-decoration: none;
+	color: blue;
+}
+
+.toycolumnitem a{
+	color: blue;
+	text-decoration: none;
+}
+
+.toycolumnitem a:hover, .toycolumntotal a:hover {
+	color: green;
+}
+
+#toytable {
+	display: inline-table;
+}
+#toyshoppinglistcontainer {
+	text-align: center;
+}
+.post-author {
+	color: navy;
+	margin: 0;
+	font-style: italic;
+}
+.post-title {
+	background-color: #d27bc6;
+	margin: 0;
+	border-color: #5d6b87;
+	color: #fff;
+	padding-left: 5px;
+	font: 27px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+.post_item {
+	background-color: #e3fefa;
+	border: 2px solid #def8f5;
+	margin: 10px;
 }

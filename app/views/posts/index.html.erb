@@ -1,0 +1,15 @@
+<h1>Messages</h1>
+<div class="news" id="tribuonews">
+	<% for post in @posts %>
+	<div class="post_item"id="post_<%= post.id %>">
+		<p class="post-title"><%=h post.title %></p>
+		<p class="post-author">posted by <%= link_to post.user.name, user_url(post.user) %> <%= distance_of_time_in_words(Time.now, post.created_at, false)%> ago</p>
+		<p class="post-body"><%=h post.body %></p>
+		<p>
+			<%= link_to 'Edit', edit_post_path(post) %> | 
+		   	<%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></p>
+		
+	</div>
+	<% end %>
+</div>
+<%= link_to 'New post', new_post_path %>

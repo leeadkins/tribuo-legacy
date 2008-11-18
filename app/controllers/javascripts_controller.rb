@@ -3,6 +3,7 @@ before_filter :login_required
 def flag_family
   if request.put?   #after all, we *are* updating...
     @family = Family.find(params[:id])
+    
     if (params[:flag] == "true")
       if (@family.flag == nil || @family.flag == false)
         @family.flag = true

@@ -40,10 +40,9 @@
   </tr>
 
 <% for family in @families %>
-<% if family.childrensize != family.children_count
+<%  familyliststyle = cycle("family-row-even", "family-row-odd")
+	if family.childrensize != family.children_count
 		familyliststyle="family-row-error"
-	else
-		familyliststyle="family-row"
 	end
 	
 	if family.flag == true

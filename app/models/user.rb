@@ -3,6 +3,7 @@ require 'digest/sha1'
 class User < ActiveRecord::Base
   belongs_to :role
   has_many :families
+  has_many :posts
   include Authentication
   include Authentication::ByPassword
   include Authentication::ByCookieToken

@@ -1,0 +1,71 @@
+<% content_for :sidebar do %>
+	<p>
+		A list of the children with the corresponding attributes.
+	</p>
+	
+	<p>
+		<%= link_to "Back to Toy Shopping List", :controller => "shoppinglist", :action => "toys" %>
+	</p>
+<% end %>
+<table class="family-list">
+	<tr>
+		<th>
+		</th>
+		<th>
+			Name
+		</th>
+		<th>
+			Gender
+		</th>
+		<th> 
+			Age
+		</th>
+		<th>
+		</th>
+		<th>
+			Family
+		</th>
+		<th>
+			Box
+		</th>
+		<th>
+			View
+		</th>	
+<% for child in @children %>
+<%	familyliststyle = cycle("family-row-even", "family-row-odd")
+
+	if child.family.flag == true
+		familyliststyle="family-row-flagged"
+		flagimage = "StarIconGold.png"
+	else
+		flagimage = "StarIconSilver.png"
+	end
+	
+%>
+	<tr id="family_<%= child.family.id %>"class="<%= familyliststyle %>">
+	<td class="family-row-flag"><%= link_to_remote image_tag(flagimage,:id => "flag_image_#{child.family.id}", :class => 'family_flag_image'), :url => {:controller => 'javascripts', :action => 'flag_family', :id => child.family.id, :flag => true}, :method => :put %></td>
+		<td>
+			<%= child.name %>
+		</td>
+		<td>
+			<%= child.human_gender %>
+		</td>
+		<td>
+			<%= child.age %>
+		</td>
+		<td>
+			<%= child.human_type %>
+		</td>
+		<td>
+			<%= child.family.lastname %>
+		</td>
+		<td>
+			<%= child.family.box %>
+		</td>
+		<td><span class="family-row-action">
+			<%= link_to "View", family_url(child.family) %>
+			</span>
+		</td>
+	</tr>
+<% end %>
+</table>
