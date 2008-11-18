@@ -67,7 +67,7 @@ a img {
 	display: block;
 	line-height: 150px;
 	overflow: hidden;
-	background-image: url(../images/naviconbg.png);
+	background-image: url(../images/naviconbg.jpg);
 }
 
 #main #header #menu li a:hover {
@@ -79,7 +79,7 @@ a img {
 	display: block;
 	line-height: 150px;
 	overflow: hidden;
-	background-image: url(../images/naviconbghover.png);
+	background-image: url(../images/naviconbghover.jpg);
 }
 
 #main #header #user {
@@ -90,7 +90,7 @@ a img {
 	width: 195px;
 	text-align: right;
 	background-color: #c5ec60;
-	background-image: url(../images/userblockbg.png);
+	background-image: url(../images/userblockbg.jpg);
 	padding-top: 10px;
 }
 
@@ -103,7 +103,7 @@ a img {
 	text-align: right;
 	padding-top: 10px;
 	background-color: #F25D27;
-	background-image: url(../images/userblockmanbg.png);
+	background-image: url(../images/userblockmanbg.jpg);
 }
 
 #main #content {
@@ -120,7 +120,7 @@ a img {
 	background-color: #dad1cc;
 	font: 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	color: #352f2c;
-	background-image: url(../images/sidebarbg.png);
+	background-image: url(../images/sidebarbg.jpg);
 }
 
 #main #content #workspace {

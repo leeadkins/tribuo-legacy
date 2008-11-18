@@ -36868,3 +36868,42 @@ Rendering template within layouts/application
 Rendering main/index
 Rendered layouts/_header (0.00270)
 Completed in 0.10491 (9 reqs/sec) | Rendering: 0.00704 (6%) | DB: 0.00081 (0%) | 200 OK [http://0.0.0.0/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-17 18:15:18) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiViZTA0NjBl
+YTU4ZGI3YzFiMzY2ZWMwMjVlMDI0NzMxYSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7269aa71ae3d82cda9a1da226c4e7ed36b2d0d94
+  Parameters: {"action"=>"index", "controller"=>"main"}
+  [4;36;1mSetting Load (0.000294)[0m   [0;1mSELECT * FROM "settings" WHERE ("settings"."name" = 'maintenance') LIMIT 1[0m
+  [4;35;1mUser Load (0.000447)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering main/index
+Rendered layouts/_header (0.00521)
+Completed in 0.03532 (28 reqs/sec) | Rendering: 0.01135 (32%) | DB: 0.00074 (2%) | 200 OK [http://0.0.0.0/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-17 18:15:20) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiViZTA0NjBl
+YTU4ZGI3YzFiMzY2ZWMwMjVlMDI0NzMxYSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7269aa71ae3d82cda9a1da226c4e7ed36b2d0d94
+  Parameters: {"action"=>"index", "controller"=>"main"}
+  [4;36;1mSetting Load (0.000345)[0m   [0;1mSELECT * FROM "settings" WHERE ("settings"."name" = 'maintenance') LIMIT 1[0m
+  [4;35;1mUser Load (0.000425)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering main/index
+Rendered layouts/_header (0.00264)
+Completed in 0.02493 (40 reqs/sec) | Rendering: 0.00448 (17%) | DB: 0.00077 (3%) | 200 OK [http://0.0.0.0/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2008-11-17 18:23:19) [GET]
+  Session ID: BAh7CToMdXNlcl9pZGkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiViZTA0NjBl
+YTU4ZGI3YzFiMzY2ZWMwMjVlMDI0NzMxYSIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--7269aa71ae3d82cda9a1da226c4e7ed36b2d0d94
+  Parameters: {"action"=>"index", "controller"=>"main"}
+  [4;36;1mSetting Load (0.000297)[0m   [0;1mSELECT * FROM "settings" WHERE ("settings"."name" = 'maintenance') LIMIT 1[0m
+  [4;35;1mUser Load (0.000446)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering main/index
+Rendered layouts/_header (0.00531)
+Completed in 0.03585 (27 reqs/sec) | Rendering: 0.01148 (32%) | DB: 0.00074 (2%) | 200 OK [http://0.0.0.0/]
