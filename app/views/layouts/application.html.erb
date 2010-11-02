@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tribuo 2010</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body> 
+	<div id="content">
+		<div id="header">
+			<h1>Tribuo</h1>
+		</div>
+		<div id="middle">
+			<%= yield %>
+		</div>
+		<div id="sidebar">
+			<%= render_navigation %>
+		</div>
+	</div>
+</body>
+</html>

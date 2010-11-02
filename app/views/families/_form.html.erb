@@ -1,0 +1,77 @@
+<%= form_for(@family) do |f| %>
+  <% if @family.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@family.errors.count, "error") %> prohibited this family from being saved:</h2>
+
+      <ul>
+      <% @family.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :lastname %><br />
+    <%= f.text_field :lastname %>
+  </div>
+  <div class="field">
+    <%= f.label :firstname %><br />
+    <%= f.text_field :firstname %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :directions %><br />
+    <%= f.text_field :directions %>
+  </div>
+  <div class="field">
+    <%= f.label :familysize %><br />
+    <%= f.text_field :familysize %>
+  </div>
+  <div class="field">
+    <%= f.label :childrensize %><br />
+    <%= f.text_field :childrensize %>
+  </div>
+  <div class="field">
+    <%= f.label :foodonly %><br />
+    <%= f.check_box :foodonly %>
+  </div>
+  <div class="field">
+    <%= f.label :box %><br />
+    <%= f.text_field :box %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :children_count %><br />
+    <%= f.text_field :children_count %>
+  </div>
+  <div class="field">
+    <%= f.label :pickup %><br />
+    <%= f.check_box :pickup %>
+  </div>
+  <div class="field">
+    <%= f.label :flag %><br />
+    <%= f.check_box :flag %>
+  </div>
+  <div class="field">
+    <%= f.label :completed_on %><br />
+    <%= f.datetime_select :completed_on %>
+  </div>
+  <div class="field">
+    <%= f.label :reserve %><br />
+    <%= f.check_box :reserve %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

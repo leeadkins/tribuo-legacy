@@ -1,0 +1,81 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Lastname:</b>
+  <%= @family.lastname %>
+</p>
+
+<p>
+  <b>Firstname:</b>
+  <%= @family.firstname %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @family.phone %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @family.address %>
+</p>
+
+<p>
+  <b>Directions:</b>
+  <%= @family.directions %>
+</p>
+
+<p>
+  <b>Familysize:</b>
+  <%= @family.familysize %>
+</p>
+
+<p>
+  <b>Childrensize:</b>
+  <%= @family.childrensize %>
+</p>
+
+<p>
+  <b>Foodonly:</b>
+  <%= @family.foodonly %>
+</p>
+
+<p>
+  <b>Box:</b>
+  <%= @family.box %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @family.user_id %>
+</p>
+
+<p>
+  <b>Children count:</b>
+  <%= @family.children_count %>
+</p>
+
+<p>
+  <b>Pickup:</b>
+  <%= @family.pickup %>
+</p>
+
+<p>
+  <b>Flag:</b>
+  <%= @family.flag %>
+</p>
+
+<p>
+  <b>Completed on:</b>
+  <%= @family.completed_on %>
+</p>
+
+<p>
+  <b>Reserve:</b>
+  <%= @family.reserve %>
+</p>
+
+
+<%= link_to 'Edit', edit_family_path(@family) %> |
+<%= link_to 'Back', families_path %> | 
+<%= link_to "Children", family_children_path(@family)%>

@@ -1,0 +1,27 @@
+<h1>Listing children</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Agetype</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @children.each do |child| %>
+  <tr>
+    <td><%= child.name %></td>
+    <td><%= child.age %></td>
+    <td><%= child.agetype %></td>
+    <td><%= link_to 'Show', family_child_path(@family, child) %></td>
+    <td><%= link_to 'Edit', edit_family_child_path(@family, child) %></td>
+    <td><%= link_to 'Destroy', family_child_path(@family, child), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%= link_to "Back to Family", @family %>
+<%= link_to 'New Child', new_family_child_path(@family) %>

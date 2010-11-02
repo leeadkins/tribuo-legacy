@@ -1,0 +1,35 @@
+<table id="families_list">
+	<thead>
+		<tr>
+			<th scope="col">Last Name</th>
+			<th scope="col">First Name</th>
+			<th scope="col">Phone</th>
+			<th scope="col">Size</th>
+			<th scope="col">Children</th>
+			<th scope="col">Box</th>
+			<th scope="col">Action</th>
+		</tr>
+	</thead>
+	<tfoot>
+		<tr>
+			<td ><%= will_paginate @families %></td>
+		</tr>
+	</tfoot>
+	<tbody>
+		<% @families.each do |family| %>
+		<tr class="<%= cycle('', 'alternate-row') %>">
+			<td><%= family.lastname %></td>
+			<td><%= family.firstname %></td>
+			<td><%= family.phone %></td>
+			<td class="numeric"><%= family.familysize %></td>
+			<td class="numeric"><%= family.childrensize %></td>
+			<td class="numeric"><%= family.box %></td>
+			<td class="numeric">
+				<%= link_to "Edit", edit_family_url(family) %>
+				<%= link_to "Show", family %>
+				<%= link_to "Delete", family, :method => "delete", :confirm => "Are you sure?"%>
+			</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
