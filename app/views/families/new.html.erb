@@ -1,5 +1,10 @@
-<h1>New family</h1>
+<h1>Create a New Family</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', families_path %>
+
+<% content_for :sidenav do %>
+	<ul class="main_menu">
+		<li><%= link_to 'Back', families_path %></li>
+	</ul>
+<% end %>

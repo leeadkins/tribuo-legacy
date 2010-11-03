@@ -2,8 +2,8 @@ class FamiliesController < ApplicationController
   # GET /families
   # GET /families.xml
   def index
-    @families = Family.paginate :page => params[:page]
-
+    #@families = Family.paginate :page => params[:page]
+    @families = Family.filter_by_params(params).paginate :page => params[:page], :per_page => Family.per_page
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @families }

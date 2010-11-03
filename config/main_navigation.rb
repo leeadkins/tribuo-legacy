@@ -40,12 +40,9 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            when the item should be highlighted, you can set a regexp which is matched
     #                            against the current URI.
     #
-    primary.item :families, "Families", families_path do |family|
-      family.item :add_family, "Add Family", new_family_path
-    end
-    
-    
-    primary.item :activites, "Activites", root_url
+    primary.item :dashboard, "Dashboard", root_url
+    primary.item :families, "Families", families_path
+    #primary.item :activites, "Activites", new_family_path
     
     # You can also specify a condition-proc that needs to be fullfilled to display an item.
     # Conditions are part of the options. They are evaluated in the context of the views,
@@ -56,7 +53,7 @@ SimpleNavigation::Configuration.run do |navigation|
     # you can also specify a css id or class to attach to this particular level
     # works for all levels of the menu
     # primary.dom_id = 'menu-id'
-    primary.dom_class = 'main_menu'
+    primary.dom_class = 'head_menu'
 
     # You can turn off auto highlighting for a specific level
     # primary.auto_highlight = false

@@ -1,5 +1,6 @@
-<h1>Listing children</h1>
+<h1>Children of the <%= @family.lastname.capitalize %> Family </h1>
 
+<% if !@children.empty? %>
 <table>
   <tr>
     <th>Name</th>
@@ -22,6 +23,15 @@
 <% end %>
 </table>
 
-<br />
-<%= link_to "Back to Family", @family %>
-<%= link_to 'New Child', new_family_child_path(@family) %>
+<% else %>
+	<h1> No Children Found</h1>
+<% end %>
+
+
+<% content_for :sidenav do %>
+
+<ul class="main_menu">
+	<li><%= link_to "Back to Family", @family %></li>
+	<li><%= link_to 'New Child', new_family_child_path(@family) %></li>
+</ul>
+<% end %>

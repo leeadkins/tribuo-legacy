@@ -11,11 +11,11 @@
 		<div id="header">
 			<h1>Tribuo</h1>
 		</div>
-		<div id="middle">
-			<%= yield %>
+		<div id="navigation">
+			<%= render_navigation :context => :main %>
 		</div>
-		<div id="sidebar">
-			<%= render_navigation %>
+		<div>
+			<%= content_for?(:content) ? yield(:content) : yield %>
 		</div>
 	</div>
 </body>

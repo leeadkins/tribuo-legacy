@@ -1,0 +1,9 @@
+<% content_for :content do %>
+	<div id="middle" class="leftbar">
+		<%= yield %>
+	</div>
+	<div id="sidebar">
+		<%= yield(:sidenav) if content_for?(:sidenav) %>
+	</div>
+<% end %>
+<%= render :file => 'layouts/application' %>

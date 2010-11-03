@@ -124,6 +124,10 @@ div.field, div.actions {
 }
 
 
+span.list-header {
+    padding: 10px;
+}
+
 .main_menu li ul {
     padding: 0;
     margin: 0;
@@ -132,11 +136,69 @@ div.field, div.actions {
 .main_menu li ul li {
     font-size: 1.1em;
     line-height: 20px;
-    background-color: #eee;
     border-radius: 0px;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     margin-bottom: 0;
+    
+}
+
+.head_menu {
+    margin: 0;
+    padding: 0;
+}
+
+.head_menu li {
+    padding-left: 5px;
+    list-style: none;
+    display: inline-block;
+    line-height: 50px;
+}
+
+.head_menu li a {
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.head_menu li.selected a {
+    background-color: #ccc;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    
+}
+
+.head_menu li a:hover {
+    background-color: #bbb;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    
+}
+
+.login_menu {
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.login_menu li {
+    list-style: none;
+    display: inline-block;
+    line-height: 50px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+#navigation {
+    height: 50px;
+    background-color: #eee;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    line-height: 50px;
     
 }
 

@@ -21,5 +21,9 @@
 </p>
 
 
-<%= link_to 'Edit', edit_family_child_path(@family, @child) %> |
-<%= link_to 'Back', family_children_path(@family) %>
+<% content_for :sidenav do %>
+	<%= link_to 'Edit', edit_family_child_path(@family, @child) %> |
+	<%= link_to 'Back', family_children_path(@family) %>
+<% end %>
+
+

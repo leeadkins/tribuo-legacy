@@ -12,7 +12,6 @@
 	</thead>
 	<tfoot>
 		<tr>
-			<td ><%= will_paginate @families %></td>
 		</tr>
 	</tfoot>
 	<tbody>
@@ -33,3 +32,23 @@
 		<% end %>
 	</tbody>
 </table>
+<div>
+<%= will_paginate @families %>
+</div>
+<% content_for :sidenav do %>
+	<ul class="main_menu">
+		<li><%= link_to "New Family", new_family_url %></li>
+		<li>
+			<span class="list-header">Filters</span>
+			<ul>
+				<li><%= link_to "All", families_url %></li>
+				<li><%= link_to "Flagged", families_url(:flagged => true) %></li>
+				<li><%= link_to "Error", families_url() %></li>
+				<li><%= link_to "Food Only", families_url(:foodonly => true) %></li>
+				<li><%= link_to "Children", families_url %></li>
+				<li><%= link_to "Deliveries", families_url %></li>
+				<li><%= link_to "Reserved", families_url %></li>
+			</ul>
+		</li>
+	</ul>
+<% end %>
