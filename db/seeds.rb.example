@@ -1,5 +1,8 @@
 #Registration is not enabled by default
 #You may wish to put something here like
+#
 # User.create({:email => "my@email.com", :password => "mypassword", :password_confirmation => "mypassword"})
 # in a seeds.rb file (run it with rake db:seed)
 # to create your first user. Otherwise, you can do it in the console
+
+#Or, you could be cool and just use the new tribuo:user generator!

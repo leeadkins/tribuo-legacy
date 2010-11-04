@@ -29,14 +29,14 @@ ActiveRecord::Schema.define(:version => 20101102060609) do
     t.string   "directions"
     t.integer  "familysize"
     t.integer  "childrensize"
-    t.boolean  "foodonly"
+    t.boolean  "foodonly",       :default => false
     t.integer  "box"
     t.integer  "user_id"
-    t.integer  "children_count"
-    t.boolean  "pickup"
-    t.boolean  "flag"
+    t.integer  "children_count", :default => 0
+    t.boolean  "pickup",         :default => false
+    t.boolean  "flag",           :default => false
     t.datetime "completed_on"
-    t.boolean  "reserve"
+    t.boolean  "reserve",        :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
