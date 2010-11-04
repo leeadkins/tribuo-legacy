@@ -9,6 +9,9 @@ To get started:
 3. If you'd like, change the database settings in config/database.yml
 4. Run rake db:schema:load
 5. Run the tribuo:user generator (rails g tribuo:user EMAIL PASSWORD) to create your first user.
+5b. Alternatively, there is also a rake task that can be run (though it is a bit uglier) if you are running 
+on a system where you don't have access to run generators (like Heroku)
+	rake tribuo_create_user["email", "password"]
 
 You can now run "rail server" and use the app. It is also ready to be deployed (Heroku is fun), assuming you change a couple of other settings first:
 
