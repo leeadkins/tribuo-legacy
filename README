@@ -1,3 +1,5 @@
+This version relies on Rails 3.  You should probably use this version, but it isn't done yet. Hence, it's experimental for now.
+
 Welcome to Tribuo!
 
 Tribuo was built for the Marion County Christmas Fund for the Needy. It makes managing hundreds of families and children easier.  You can generate the tags needed for food or toy boxes or get an idea of the amount of toys or food you're going to need.
