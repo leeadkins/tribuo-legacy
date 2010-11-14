@@ -1,4 +1,5 @@
 class FamiliesController < ApplicationController
+  before_filter :authenticate_user!
   # GET /families
   # GET /families.xml
   def index

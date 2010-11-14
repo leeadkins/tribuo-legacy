@@ -1,4 +1,5 @@
 class ChildrenController < ApplicationController
+  before_filter :authenticate_user!
   # GET /children
   # GET /children.xml
   before_filter :load_family
